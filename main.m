@@ -1,28 +1,28 @@
-%¡¶¿¼ÂÇµç¶¯Æû³µ¿Éµ÷¶ÈÇ±Á¦µÄ³äµçÕ¾Á½½×¶ÎÊĞ³¡Í¶±ê²ßÂÔ¡·Ò»ÎÄÏà¹Ø³ÌĞò£¬×÷Îª¡¶µçÍø¼¼Êõ¡·¸å¼ş¸½¼ş
-%°üº¬¹¦ÄÜ£ºÊµÊ±¿Éµ÷¶ÈÇ±Á¦¼ÆËã£¬ÈÕÇ°¿Éµ÷¶ÈÇ±Á¦¼ÆËã£¬³äµçÕ¾ÈÕÇ°Í¶±ê²ßÂÔ£¬³äµçÕ¾ÊµÊ±Í¶±ê²ßÂÔ£¬²ÎÊıÁéÃô¶È·ÖÎö
-%½ö¹©Ñ§Êõ½»Á÷Ê¹ÓÃ£¬ÒÑ×¢²áÈí¼şÖø×÷È¨
+%ã€Šè€ƒè™‘ç”µåŠ¨æ±½è½¦å¯è°ƒåº¦æ½œåŠ›çš„å……ç”µç«™ä¸¤é˜¶æ®µå¸‚åœºæŠ•æ ‡ç­–ç•¥ã€‹ä¸€æ–‡ç›¸å…³ç¨‹åºï¼Œä½œä¸ºã€Šç”µåŠ›ç³»ç»Ÿè‡ªåŠ¨åŒ–ã€‹ç¨¿ä»¶é™„ä»¶
+%åŒ…å«åŠŸèƒ½ï¼šå®æ—¶å¯è°ƒåº¦æ½œåŠ›è®¡ç®—ï¼Œæ—¥å‰å¯è°ƒåº¦æ½œåŠ›è®¡ç®—ï¼Œå……ç”µç«™æ—¥å‰æŠ•æ ‡ç­–ç•¥ï¼Œå……ç”µç«™å®æ—¶æŠ•æ ‡ç­–ç•¥ï¼Œå‚æ•°çµæ•åº¦åˆ†æ
+%ä»…ä¾›å­¦æœ¯äº¤æµä½¿ç”¨ï¼Œå·²æ³¨å†Œè½¯ä»¶è‘—ä½œæƒ
 %authors:X.P. Zhan. GitHub:WHU_zxp
-%ÔËĞĞ»·¾³£ºMATLAB R2014a,ĞèÒªYALMIP¹¤¾ßÏäºÍGUROBIÇó½âÆ÷
+%è¿è¡Œç¯å¢ƒï¼šMATLAB R2014a,éœ€è¦YALMIPå·¥å…·ç®±å’ŒGUROBIæ±‚è§£å™¨
 clear
 clc
 close all
-%% µÚÒ»½Ú(»ù´¡Êı¾İ»ñÈ¡£¬°üÀ¨ÃÉÌØ¿¨Âå³éÑù£¬¿Éµ÷¶ÈÇ±Á¦¼ÆËãÒÔ¼°ÎŞĞò³äµç¼ÆËã)
-%%%ÃÉÌØ¿¨Âå³éÑù%%%
-%IÀà³µ(800)£¬Ò¹Íí³äµç£¬Ë½¼Ò³µ£»IIÀà³µ(400)£¬Ò¹Íí³äµç£¬ÍøÔ¼³µ£»IIIÀà³µ(800)£¬°×Ìì³äµç£¬ÉÏ°à×å¡£
-rng(1);%¹Ì¶¨Ëæ»úÊıÖÖ×Ó(Î±Ëæ»ú£º±£Ö¤ÃÉÌØ¿¨Âå³éÑùµÄ½á¹ûÎÈ¶¨)
-Ta_EV1=normrnd(18,2,[1001,1000]);%µç¶¯Æû³µ1µÄÍ£³µÊ±¼ä³éÑù
-rng(1);Tl_EV1=normrnd(8,2,[1001,1000]);%µç¶¯Æû³µ1µÄÀë¿ªÊ±¼ä³éÑù
-rng(1);S0_EV1=unifrnd(0.4,0.6,[1001,1000]);%µç¶¯Æû³µ1µÄ³õÊ¼SOC³éÑù
+%% ç¬¬ä¸€èŠ‚(åŸºç¡€æ•°æ®è·å–ï¼ŒåŒ…æ‹¬è’™ç‰¹å¡æ´›æŠ½æ ·ï¼Œå¯è°ƒåº¦æ½œåŠ›è®¡ç®—ä»¥åŠæ— åºå……ç”µè®¡ç®—)
+%%%è’™ç‰¹å¡æ´›æŠ½æ ·%%%
+%Iç±»è½¦(800)ï¼Œå¤œæ™šå……ç”µï¼Œç§å®¶è½¦ï¼›IIç±»è½¦(400)ï¼Œå¤œæ™šå……ç”µï¼Œç½‘çº¦è½¦ï¼›IIIç±»è½¦(800)ï¼Œç™½å¤©å……ç”µï¼Œä¸Šç­æ—ã€‚
+rng(1);%å›ºå®šéšæœºæ•°ç§å­(ä¼ªéšæœºï¼šä¿è¯è’™ç‰¹å¡æ´›æŠ½æ ·çš„ç»“æœç¨³å®š)
+Ta_EV1=normrnd(18,2,[1001,1000]);%ç”µåŠ¨æ±½è½¦1çš„åœè½¦æ—¶é—´æŠ½æ ·
+rng(1);Tl_EV1=normrnd(8,2,[1001,1000]);%ç”µåŠ¨æ±½è½¦1çš„ç¦»å¼€æ—¶é—´æŠ½æ ·
+rng(1);S0_EV1=unifrnd(0.4,0.6,[1001,1000]);%ç”µåŠ¨æ±½è½¦1çš„åˆå§‹SOCæŠ½æ ·
 rng(1);Ta_EV2=normrnd(21,1,[1001,500]);
 rng(1);Tl_EV2=normrnd(7,1,[1001,500]);
 rng(1);S0_EV2=unifrnd(0.2,0.4,[1001,500]);
 rng(1);Ta_EV3=normrnd(9,sqrt(2),[1001,1000]);
 rng(1);Tl_EV3=normrnd(17,sqrt(2),[1001,1000]);
 rng(1);S0_EV3=unifrnd(0.4,0.6,[1001,1000]);
-rng(1);EV1_CS1=round(unifrnd(180,220,[1001,1]));%³äµçÕ¾1ÖĞIÀà³µµÄÊıÁ¿
-rng(1);EV1_CS2=round(unifrnd(180,220,[1001,1]));%³äµçÕ¾2ÖĞIÀà³µµÄÊıÁ¿
-rng(1);EV1_CS3=zeros(1001,1);%³äµçÕ¾3ÖĞIÀà³µµÄÊıÁ¿
-rng(1);EV1_CS4=round(unifrnd(380,420,[1001,1]));%³äµçÕ¾4ÖĞIÀà³µµÄÊıÁ¿
+rng(1);EV1_CS1=round(unifrnd(180,220,[1001,1]));%å……ç”µç«™1ä¸­Iç±»è½¦çš„æ•°é‡
+rng(1);EV1_CS2=round(unifrnd(180,220,[1001,1]));%å……ç”µç«™2ä¸­Iç±»è½¦çš„æ•°é‡
+rng(1);EV1_CS3=zeros(1001,1);%å……ç”µç«™3ä¸­Iç±»è½¦çš„æ•°é‡
+rng(1);EV1_CS4=round(unifrnd(380,420,[1001,1]));%å……ç”µç«™4ä¸­Iç±»è½¦çš„æ•°é‡
 rng(1);EV2_CS1=round(unifrnd(190,210,[1001,1]));
 rng(1);EV2_CS2=round(unifrnd(80,120,[1001,1]));
 rng(1);EV2_CS3=round(unifrnd(90,110,[1001,1]));
@@ -31,23 +31,23 @@ rng(1);EV3_CS1=zeros(1001,1);
 rng(1);EV3_CS2=round(unifrnd(380,420,[1001,1]));
 rng(1);EV3_CS3=round(unifrnd(380,420,[1001,1]));
 rng(1);EV3_CS4=zeros(1001,1);
-%Êı¾İĞŞÕı£¬´Ó08:00¿ªÊ¼¼ÆËã£¬³¬³ö·¶Î§µÄ½øĞĞ½ØÎ²(½ØÎ²ÕıÌ¬·Ö²¼)
+%æ•°æ®ä¿®æ­£ï¼Œä»08:00å¼€å§‹è®¡ç®—ï¼Œè¶…å‡ºèŒƒå›´çš„è¿›è¡Œæˆªå°¾(æˆªå°¾æ­£æ€åˆ†å¸ƒ)
 Ta_EV1=Ta_EV1-8;Tl_EV1=Tl_EV1+24-8;Ta_EV2=Ta_EV2-8;Tl_EV2=Tl_EV2+24-8;Ta_EV3=Ta_EV3-8;Tl_EV3=Tl_EV3-8;S0_EV1=32*S0_EV1;S0_EV2=32*S0_EV2;S0_EV3=32*S0_EV3;
-DA_Ta_EV1=ceil(Ta_EV1(1:1000,:));DA_Ta_EV2=ceil(Ta_EV2(1:1000,:));DA_Ta_EV3=ceil(Ta_EV3(1:1000,:));%ÈÕÇ°ÀëÉ¢»¯
+DA_Ta_EV1=ceil(Ta_EV1(1:1000,:));DA_Ta_EV2=ceil(Ta_EV2(1:1000,:));DA_Ta_EV3=ceil(Ta_EV3(1:1000,:));%æ—¥å‰ç¦»æ•£åŒ–
 DA_Tl_EV1=floor(Tl_EV1(1:1000,:));DA_Tl_EV2=floor(Tl_EV2(1:1000,:));DA_Tl_EV3=floor(Tl_EV3(1:1000,:));
 DA_S0_EV1=S0_EV1(1:1000,:);DA_S0_EV2=S0_EV2(1:1000,:);DA_S0_EV3=S0_EV3(1:1000,:);
-RT_Ta_EV1=ceil(4*Ta_EV1(1001,:));RT_Ta_EV2=ceil(4*Ta_EV2(1001,:));RT_Ta_EV3=ceil(4*Ta_EV3(1001,:));%ÊµÊ±ÀëÉ¢»¯
+RT_Ta_EV1=ceil(4*Ta_EV1(1001,:));RT_Ta_EV2=ceil(4*Ta_EV2(1001,:));RT_Ta_EV3=ceil(4*Ta_EV3(1001,:));%å®æ—¶ç¦»æ•£åŒ–
 RT_Tl_EV1=floor(4*Tl_EV1(1001,:));RT_Tl_EV2=floor(4*Tl_EV2(1001,:));RT_Tl_EV3=floor(4*Tl_EV3(1001,:));
 RT_S0_EV1=S0_EV1(1001,:);RT_S0_EV2=S0_EV2(1001,:);RT_S0_EV3=S0_EV3(1001,:);
-DA_Ta_EV1(find(DA_Ta_EV1<1))=1;DA_Ta_EV2(find(DA_Ta_EV2<1))=1;DA_Ta_EV3(find(DA_Ta_EV3<1))=1;%Ta½ØÊ×
+DA_Ta_EV1(find(DA_Ta_EV1<1))=1;DA_Ta_EV2(find(DA_Ta_EV2<1))=1;DA_Ta_EV3(find(DA_Ta_EV3<1))=1;%Taæˆªé¦–
 RT_Ta_EV1(find(RT_Ta_EV1<1))=1;RT_Ta_EV2(find(RT_Ta_EV2<1))=1;RT_Ta_EV3(find(RT_Ta_EV3<1))=1;
-DA_Ta_EV1(find(DA_Ta_EV1>24))=24;DA_Ta_EV2(find(DA_Ta_EV2>24))=24;DA_Ta_EV3(find(DA_Ta_EV3>24))=24;%Ta½ØÎ²
+DA_Ta_EV1(find(DA_Ta_EV1>24))=24;DA_Ta_EV2(find(DA_Ta_EV2>24))=24;DA_Ta_EV3(find(DA_Ta_EV3>24))=24;%Taæˆªå°¾
 RT_Ta_EV1(find(RT_Ta_EV1>96))=96;RT_Ta_EV2(find(RT_Ta_EV2>96))=96;RT_Ta_EV3(find(RT_Ta_EV3>96))=96;
-DA_Tl_EV1(find(DA_Tl_EV1<1))=1;DA_Tl_EV2(find(DA_Tl_EV2<1))=1;DA_Tl_EV3(find(DA_Tl_EV3<1))=1;%Tl½ØÊ×
+DA_Tl_EV1(find(DA_Tl_EV1<1))=1;DA_Tl_EV2(find(DA_Tl_EV2<1))=1;DA_Tl_EV3(find(DA_Tl_EV3<1))=1;%Tlæˆªé¦–
 RT_Tl_EV1(find(RT_Tl_EV1<1))=1;RT_Tl_EV2(find(RT_Tl_EV2<1))=1;RT_Tl_EV3(find(RT_Tl_EV3<1))=1;
-DA_Tl_EV1(find(DA_Tl_EV1>24))=24;DA_Tl_EV2(find(DA_Tl_EV2>24))=24;DA_Tl_EV3(find(DA_Tl_EV3>24))=24;%Tl½ØÎ²
+DA_Tl_EV1(find(DA_Tl_EV1>24))=24;DA_Tl_EV2(find(DA_Tl_EV2>24))=24;DA_Tl_EV3(find(DA_Tl_EV3>24))=24;%Tlæˆªå°¾
 RT_Tl_EV1(find(RT_Tl_EV1>96))=96;RT_Tl_EV2(find(RT_Tl_EV2>96))=96;RT_Tl_EV3(find(RT_Tl_EV3>96))=96;
-index=find(6.6*(DA_Tl_EV1-DA_Ta_EV1+1)<32*0.9-DA_S0_EV1);%ÈÕÇ°Êı¾İĞŞÕı£¬Èô²»ºÏÀíÔò¸³ÆÚÍûÖµ
+index=find(6.6*(DA_Tl_EV1-DA_Ta_EV1+1)<32*0.9-DA_S0_EV1);%æ—¥å‰æ•°æ®ä¿®æ­£ï¼Œè‹¥ä¸åˆç†åˆ™èµ‹æœŸæœ›å€¼
 for i=1:length(index)
     DA_Ta_EV1(index(i))=10;DA_Tl_EV1(index(i))=24;
 end
@@ -59,7 +59,7 @@ index=find(6.6*(DA_Tl_EV3-DA_Ta_EV3+1)<32*0.9-DA_S0_EV3);
 for i=1:length(index)
     DA_Ta_EV3(index(i))=1;DA_Tl_EV3(index(i))=9;
 end
-index=find(0.25*6.6*(RT_Tl_EV1-RT_Ta_EV1+1)<32*0.9-RT_S0_EV1);%ÊµÊ±Êı¾İĞŞÕı£¬Èô²»ºÏÀíÔò¸³ÆÚÍûÖµ
+index=find(0.25*6.6*(RT_Tl_EV1-RT_Ta_EV1+1)<32*0.9-RT_S0_EV1);%å®æ—¶æ•°æ®ä¿®æ­£ï¼Œè‹¥ä¸åˆç†åˆ™èµ‹æœŸæœ›å€¼
 for i=1:length(index)
     RT_Ta_EV1(index(i))=40;RT_Tl_EV1(index(i))=96;
 end
@@ -71,7 +71,7 @@ index=find(0.25*6.6*(RT_Tl_EV3-RT_Ta_EV3+1)<32*0.9-RT_S0_EV3);
 for i=1:length(index)
     RT_Ta_EV3(index(i))=4;RT_Tl_EV3(index(i))=36;
 end
-%%%³µÁ¾·ÖÅä%%%
+%%%è½¦è¾†åˆ†é…%%%
 for i=1:1000
     data_CS1(i).Ta=[DA_Ta_EV1(i,1:EV1_CS1(i)),DA_Ta_EV2(i,1:EV2_CS1(i)),DA_Ta_EV3(i,1:EV3_CS1(i))];
     data_CS2(i).Ta=[DA_Ta_EV1(i,1+EV1_CS1(i):EV1_CS1(i)+EV1_CS2(i)),DA_Ta_EV2(i,1+EV2_CS1(i):EV2_CS1(i)+EV2_CS2(i)),DA_Ta_EV3(i,1+EV3_CS1(i):EV3_CS1(i)+EV3_CS2(i))];
@@ -98,393 +98,393 @@ data_CS1(1001).S0=[RT_S0_EV1(1:EV1_CS1(1001)),RT_S0_EV2(1:EV2_CS1(1001)),RT_S0_E
 data_CS2(1001).S0=[RT_S0_EV1(1+EV1_CS1(1001):EV1_CS1(1001)+EV1_CS2(1001)),RT_S0_EV2(1+EV2_CS1(1001):EV2_CS1(1001)+EV2_CS2(1001)),RT_S0_EV3(1+EV3_CS1(1001):EV3_CS1(1001)+EV3_CS2(1001))];
 data_CS3(1001).S0=[RT_S0_EV1(1+EV1_CS1(1001)+EV1_CS2(1001):EV1_CS1(1001)+EV1_CS2(1001)+EV1_CS3(1001)),RT_S0_EV2(1+EV2_CS1(1001)+EV2_CS2(1001):EV2_CS1(1001)+EV2_CS2(1001)+EV2_CS3(1001)),RT_S0_EV3(1+EV3_CS1(1001)+EV3_CS2(1001):EV3_CS1(1001)+EV3_CS2(1001)+EV3_CS3(1001))];
 data_CS4(1001).S0=[RT_S0_EV1(1+EV1_CS1(1001)+EV1_CS2(1001)+EV1_CS3(1001):EV1_CS1(1001)+EV1_CS2(1001)+EV1_CS3(1001)+EV1_CS4(1001)),RT_S0_EV2(1+EV2_CS1(1001)+EV2_CS2(1001)+EV2_CS3(1001):EV2_CS1(1001)+EV2_CS2(1001)+EV2_CS3(1001)+EV2_CS4(1001)),RT_S0_EV3(1+EV3_CS1(1001)+EV3_CS2(1001)+EV3_CS3(1001):EV3_CS1(1001)+EV3_CS2(1001)+EV3_CS3(1001)+EV3_CS4(1001))];
-%%%ÀúÊ·¿Éµ÷¶ÈÇ±Á¦¼ÆËã%%%
+%%%å†å²å¯è°ƒåº¦æ½œåŠ›è®¡ç®—%%%
 for i=1:1000
-    %³äµçÕ¾1
-    data_CS1(i).X=zeros(length(data_CS1(i).S0),24);%Éú³ÉÍ£²´×´Ì¬¾ØÕó
+    %å……ç”µç«™1
+    data_CS1(i).X=zeros(length(data_CS1(i).S0),24);%ç”Ÿæˆåœæ³ŠçŠ¶æ€çŸ©é˜µ
     for j=1:length(data_CS1(i).S0)
         data_CS1(i).X(j,data_CS1(i).Ta(j):data_CS1(i).Tl(j))=1;
     end
-    data_CS1(i).Pch=6.6*sum(data_CS1(i).X);%¹ãÒå´¢ÄÜµÄ³äµç¹¦ÂÊ
-    data_CS1(i).Pdis=6.6*sum(data_CS1(i).X);%¹ãÒå´¢ÄÜµÄ·Åµç¹¦ÂÊ
-    data_CS1(i).Smin(1:23)=32*0.15*sum(data_CS1(i).X(:,1:23))+(32*0.9-32*0.15)*sum(data_CS1(i).X(:,1:23).*(data_CS1(i).X(:,1:23)-data_CS1(i).X(:,2:24)));%¹ãÒå´¢ÄÜµÄ×îĞ¡ÈİÁ¿
+    data_CS1(i).Pch=6.6*sum(data_CS1(i).X);%å¹¿ä¹‰å‚¨èƒ½çš„å……ç”µåŠŸç‡
+    data_CS1(i).Pdis=6.6*sum(data_CS1(i).X);%å¹¿ä¹‰å‚¨èƒ½çš„æ”¾ç”µåŠŸç‡
+    data_CS1(i).Smin(1:23)=32*0.15*sum(data_CS1(i).X(:,1:23))+(32*0.9-32*0.15)*sum(data_CS1(i).X(:,1:23).*(data_CS1(i).X(:,1:23)-data_CS1(i).X(:,2:24)));%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å°å®¹é‡
     data_CS1(i).Smin(24)=32*0.15*sum(data_CS1(i).X(:,24))+(32*0.9-32*0.15)*sum(data_CS1(i).X(:,24));
-    data_CS1(i).Smax=32*0.9*sum(data_CS1(i).X);%¹ãÒå´¢ÄÜµÄ×î´óÈİÁ¿
-    data_CS1(i).dS=zeros(1,24);%¹ãÒå´¢ÄÜµÄÈİÁ¿±ä»¯Á¿
+    data_CS1(i).Smax=32*0.9*sum(data_CS1(i).X);%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å¤§å®¹é‡
+    data_CS1(i).dS=zeros(1,24);%å¹¿ä¹‰å‚¨èƒ½çš„å®¹é‡å˜åŒ–é‡
     data_CS1(i).dS(1,1)=data_CS1(i).S0*data_CS1(i).X(:,1);
     data_CS1(i).dS(1,2:24)=data_CS1(i).S0*(data_CS1(i).X(:,2:24).*(data_CS1(i).X(:,2:24)-data_CS1(i).X(:,1:23)))-32*0.9*sum(data_CS1(i).X(:,1:23).*(data_CS1(i).X(:,1:23)-data_CS1(i).X(:,2:24)));
-    %³äµçÕ¾2
-    data_CS2(i).X=zeros(length(data_CS2(i).S0),24);%Éú³ÉÍ£²´×´Ì¬¾ØÕó
+    %å……ç”µç«™2
+    data_CS2(i).X=zeros(length(data_CS2(i).S0),24);%ç”Ÿæˆåœæ³ŠçŠ¶æ€çŸ©é˜µ
     for j=1:length(data_CS2(i).S0)
         data_CS2(i).X(j,data_CS2(i).Ta(j):data_CS2(i).Tl(j))=1;
     end
-    data_CS2(i).Pch=6.6*sum(data_CS2(i).X);%¹ãÒå´¢ÄÜµÄ³äµç¹¦ÂÊ
-    data_CS2(i).Pdis=6.6*sum(data_CS2(i).X);%¹ãÒå´¢ÄÜµÄ·Åµç¹¦ÂÊ
-    data_CS2(i).Smin(1:23)=32*0.15*sum(data_CS2(i).X(:,1:23))+(32*0.9-32*0.15)*sum(data_CS2(i).X(:,1:23).*(data_CS2(i).X(:,1:23)-data_CS2(i).X(:,2:24)));%¹ãÒå´¢ÄÜµÄ×îĞ¡ÈİÁ¿
+    data_CS2(i).Pch=6.6*sum(data_CS2(i).X);%å¹¿ä¹‰å‚¨èƒ½çš„å……ç”µåŠŸç‡
+    data_CS2(i).Pdis=6.6*sum(data_CS2(i).X);%å¹¿ä¹‰å‚¨èƒ½çš„æ”¾ç”µåŠŸç‡
+    data_CS2(i).Smin(1:23)=32*0.15*sum(data_CS2(i).X(:,1:23))+(32*0.9-32*0.15)*sum(data_CS2(i).X(:,1:23).*(data_CS2(i).X(:,1:23)-data_CS2(i).X(:,2:24)));%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å°å®¹é‡
     data_CS2(i).Smin(24)=32*0.15*sum(data_CS2(i).X(:,24))+(32*0.9-32*0.15)*sum(data_CS2(i).X(:,24));
-    data_CS2(i).Smax=32*0.9*sum(data_CS2(i).X);%¹ãÒå´¢ÄÜµÄ×î´óÈİÁ¿
-    data_CS2(i).dS=zeros(1,24);%¹ãÒå´¢ÄÜµÄÈİÁ¿±ä»¯Á¿
+    data_CS2(i).Smax=32*0.9*sum(data_CS2(i).X);%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å¤§å®¹é‡
+    data_CS2(i).dS=zeros(1,24);%å¹¿ä¹‰å‚¨èƒ½çš„å®¹é‡å˜åŒ–é‡
     data_CS2(i).dS(1,1)=data_CS2(i).S0*data_CS2(i).X(:,1);
     data_CS2(i).dS(1,2:24)=data_CS2(i).S0*(data_CS2(i).X(:,2:24).*(data_CS2(i).X(:,2:24)-data_CS2(i).X(:,1:23)))-32*0.9*sum(data_CS2(i).X(:,1:23).*(data_CS2(i).X(:,1:23)-data_CS2(i).X(:,2:24)));
-    %³äµçÕ¾3
-    data_CS3(i).X=zeros(length(data_CS3(i).S0),24);%Éú³ÉÍ£²´×´Ì¬¾ØÕó
+    %å……ç”µç«™3
+    data_CS3(i).X=zeros(length(data_CS3(i).S0),24);%ç”Ÿæˆåœæ³ŠçŠ¶æ€çŸ©é˜µ
     for j=1:length(data_CS3(i).S0)
         data_CS3(i).X(j,data_CS3(i).Ta(j):data_CS3(i).Tl(j))=1;
     end
-    data_CS3(i).Pch=6.6*sum(data_CS3(i).X);%¹ãÒå´¢ÄÜµÄ³äµç¹¦ÂÊ
-    data_CS3(i).Pdis=6.6*sum(data_CS3(i).X);%¹ãÒå´¢ÄÜµÄ·Åµç¹¦ÂÊ
-    data_CS3(i).Smin(1:23)=32*0.15*sum(data_CS3(i).X(:,1:23))+(32*0.9-32*0.15)*sum(data_CS3(i).X(:,1:23).*(data_CS3(i).X(:,1:23)-data_CS3(i).X(:,2:24)));%¹ãÒå´¢ÄÜµÄ×îĞ¡ÈİÁ¿
+    data_CS3(i).Pch=6.6*sum(data_CS3(i).X);%å¹¿ä¹‰å‚¨èƒ½çš„å……ç”µåŠŸç‡
+    data_CS3(i).Pdis=6.6*sum(data_CS3(i).X);%å¹¿ä¹‰å‚¨èƒ½çš„æ”¾ç”µåŠŸç‡
+    data_CS3(i).Smin(1:23)=32*0.15*sum(data_CS3(i).X(:,1:23))+(32*0.9-32*0.15)*sum(data_CS3(i).X(:,1:23).*(data_CS3(i).X(:,1:23)-data_CS3(i).X(:,2:24)));%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å°å®¹é‡
     data_CS3(i).Smin(24)=32*0.15*sum(data_CS3(i).X(:,24))+(32*0.9-32*0.15)*sum(data_CS3(i).X(:,24));
-    data_CS3(i).Smax=32*0.9*sum(data_CS3(i).X);%¹ãÒå´¢ÄÜµÄ×î´óÈİÁ¿
-    data_CS3(i).dS=zeros(1,24);%¹ãÒå´¢ÄÜµÄÈİÁ¿±ä»¯Á¿
+    data_CS3(i).Smax=32*0.9*sum(data_CS3(i).X);%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å¤§å®¹é‡
+    data_CS3(i).dS=zeros(1,24);%å¹¿ä¹‰å‚¨èƒ½çš„å®¹é‡å˜åŒ–é‡
     data_CS3(i).dS(1,1)=data_CS3(i).S0*data_CS3(i).X(:,1);
     data_CS3(i).dS(1,2:24)=data_CS3(i).S0*(data_CS3(i).X(:,2:24).*(data_CS3(i).X(:,2:24)-data_CS3(i).X(:,1:23)))-32*0.9*sum(data_CS3(i).X(:,1:23).*(data_CS3(i).X(:,1:23)-data_CS3(i).X(:,2:24)));
-    %³äµçÕ¾4
-    data_CS4(i).X=zeros(length(data_CS4(i).S0),24);%Éú³ÉÍ£²´×´Ì¬¾ØÕó
+    %å……ç”µç«™4
+    data_CS4(i).X=zeros(length(data_CS4(i).S0),24);%ç”Ÿæˆåœæ³ŠçŠ¶æ€çŸ©é˜µ
     for j=1:length(data_CS4(i).S0)
         data_CS4(i).X(j,data_CS4(i).Ta(j):data_CS4(i).Tl(j))=1;
     end
-    data_CS4(i).Pch=6.6*sum(data_CS4(i).X);%¹ãÒå´¢ÄÜµÄ³äµç¹¦ÂÊ
-    data_CS4(i).Pdis=6.6*sum(data_CS4(i).X);%¹ãÒå´¢ÄÜµÄ·Åµç¹¦ÂÊ
-    data_CS4(i).Smin(1:23)=32*0.15*sum(data_CS4(i).X(:,1:23))+(32*0.9-32*0.15)*sum(data_CS4(i).X(:,1:23).*(data_CS4(i).X(:,1:23)-data_CS4(i).X(:,2:24)));%¹ãÒå´¢ÄÜµÄ×îĞ¡ÈİÁ¿
+    data_CS4(i).Pch=6.6*sum(data_CS4(i).X);%å¹¿ä¹‰å‚¨èƒ½çš„å……ç”µåŠŸç‡
+    data_CS4(i).Pdis=6.6*sum(data_CS4(i).X);%å¹¿ä¹‰å‚¨èƒ½çš„æ”¾ç”µåŠŸç‡
+    data_CS4(i).Smin(1:23)=32*0.15*sum(data_CS4(i).X(:,1:23))+(32*0.9-32*0.15)*sum(data_CS4(i).X(:,1:23).*(data_CS4(i).X(:,1:23)-data_CS4(i).X(:,2:24)));%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å°å®¹é‡
     data_CS4(i).Smin(24)=32*0.15*sum(data_CS4(i).X(:,24))+(32*0.9-32*0.15)*sum(data_CS4(i).X(:,24));
-    data_CS4(i).Smax=32*0.9*sum(data_CS4(i).X);%¹ãÒå´¢ÄÜµÄ×î´óÈİÁ¿
-    data_CS4(i).dS=zeros(1,24);%¹ãÒå´¢ÄÜµÄÈİÁ¿±ä»¯Á¿
+    data_CS4(i).Smax=32*0.9*sum(data_CS4(i).X);%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å¤§å®¹é‡
+    data_CS4(i).dS=zeros(1,24);%å¹¿ä¹‰å‚¨èƒ½çš„å®¹é‡å˜åŒ–é‡
     data_CS4(i).dS(1,1)=data_CS4(i).S0*data_CS4(i).X(:,1);
     data_CS4(i).dS(1,2:24)=data_CS4(i).S0*(data_CS4(i).X(:,2:24).*(data_CS4(i).X(:,2:24)-data_CS4(i).X(:,1:23)))-32*0.9*sum(data_CS4(i).X(:,1:23).*(data_CS4(i).X(:,1:23)-data_CS4(i).X(:,2:24)));
 end
-%%%ÈÕÇ°¿Éµ÷¶ÈÇ±Á¦Ô¤²â%%%
-%³äµçÕ¾1
+%%%æ—¥å‰å¯è°ƒåº¦æ½œåŠ›é¢„æµ‹%%%
+%å……ç”µç«™1
 Pch_CS1=zeros(1000,24);Pdis_CS1=zeros(1000,24);Smin_CS1=zeros(1000,24);Smax_CS1=zeros(1000,24);dS_CS1=zeros(1000,24);
 for i=1:1000
     Pch_CS1(i,:)=data_CS1(i).Pch;Pdis_CS1(i,:)=data_CS1(i).Pdis;Smin_CS1(i,:)=data_CS1(i).Smin;Smax_CS1(i,:)=data_CS1(i).Smax;dS_CS1(i,:)=data_CS1(i).dS;
 end
 Forecast_CS1=[mean(Pch_CS1);mean(Pdis_CS1);mean(Smin_CS1);mean(Smax_CS1);mean(dS_CS1)];
-%³äµçÕ¾2
+%å……ç”µç«™2
 Pch_CS2=zeros(1000,24);Pdis_CS2=zeros(1000,24);Smin_CS2=zeros(1000,24);Smax_CS2=zeros(1000,24);dS_CS2=zeros(1000,24);
 for i=1:1000
     Pch_CS2(i,:)=data_CS2(i).Pch;Pdis_CS2(i,:)=data_CS2(i).Pdis;Smin_CS2(i,:)=data_CS2(i).Smin;Smax_CS2(i,:)=data_CS2(i).Smax;dS_CS2(i,:)=data_CS2(i).dS;
 end
 Forecast_CS2=[mean(Pch_CS2);mean(Pdis_CS2);mean(Smin_CS2);mean(Smax_CS2);mean(dS_CS2)];
-%³äµçÕ¾3
+%å……ç”µç«™3
 Pch_CS3=zeros(1000,24);Pdis_CS3=zeros(1000,24);Smin_CS3=zeros(1000,24);Smax_CS3=zeros(1000,24);dS_CS3=zeros(1000,24);
 for i=1:1000
     Pch_CS3(i,:)=data_CS3(i).Pch;Pdis_CS3(i,:)=data_CS3(i).Pdis;Smin_CS3(i,:)=data_CS3(i).Smin;Smax_CS3(i,:)=data_CS3(i).Smax;dS_CS3(i,:)=data_CS3(i).dS;
 end
 Forecast_CS3=[mean(Pch_CS3);mean(Pdis_CS3);mean(Smin_CS3);mean(Smax_CS3);mean(dS_CS3)];
-%³äµçÕ¾4
+%å……ç”µç«™4
 Pch_CS4=zeros(1000,24);Pdis_CS4=zeros(1000,24);Smin_CS4=zeros(1000,24);Smax_CS4=zeros(1000,24);dS_CS4=zeros(1000,24);
 for i=1:1000
     Pch_CS4(i,:)=data_CS4(i).Pch;Pdis_CS4(i,:)=data_CS4(i).Pdis;Smin_CS4(i,:)=data_CS4(i).Smin;Smax_CS4(i,:)=data_CS4(i).Smax;dS_CS4(i,:)=data_CS4(i).dS;
 end
 Forecast_CS4=[mean(Pch_CS4);mean(Pdis_CS4);mean(Smin_CS4);mean(Smax_CS4);mean(dS_CS4)];
-%%%ÈÕÇ°ÎŞĞò³äµç¹¦ÂÊ(ÓÅÏÈ³äµçÔ­Ôò)%%%
-%³äµçÕ¾1
-Pch_CS1_disorder=sdpvar(1,24);%³äµç
-Pdis_CS1_disorder=zeros(1,24);%·Åµç
+%%%æ—¥å‰æ— åºå……ç”µåŠŸç‡(ä¼˜å…ˆå……ç”µåŸåˆ™)%%%
+%å……ç”µç«™1
+Pch_CS1_disorder=sdpvar(1,24);%å……ç”µ
+Pdis_CS1_disorder=zeros(1,24);%æ”¾ç”µ
 S_CS1_disorder=sdpvar(1,24);%SOC
-f_CS1_disorder=Pch_CS1_disorder*[1:24]';%ÓÅÏÈ³äµçÔ­ÔòÄ¿±êº¯Êı
+f_CS1_disorder=Pch_CS1_disorder*[1:24]';%ä¼˜å…ˆå……ç”µåŸåˆ™ç›®æ ‡å‡½æ•°
 C_CS1_disorder=[0<=Pch_CS1_disorder<=Forecast_CS1(1,:),
     Forecast_CS1(3,:)<=S_CS1_disorder<=Forecast_CS1(4,:),
     S_CS1_disorder(1)==0.95*Pch_CS1_disorder(1)+Forecast_CS1(5,1),
-    S_CS1_disorder(2:24)==S_CS1_disorder(1:23)+0.95*Pch_CS1_disorder(2:24)+Forecast_CS1(5,2:24)];%Ô¼ÊøÌõ¼ş
+    S_CS1_disorder(2:24)==S_CS1_disorder(1:23)+0.95*Pch_CS1_disorder(2:24)+Forecast_CS1(5,2:24)];%çº¦æŸæ¡ä»¶
 solvesdp(C_CS1_disorder,f_CS1_disorder);
 Pch_CS1_disorder=double(Pch_CS1_disorder);
 S_CS1_disorder=double(S_CS1_disorder);
-%³äµçÕ¾2
-Pch_CS2_disorder=sdpvar(1,24);%³äµç
-Pdis_CS2_disorder=zeros(1,24);%·Åµç
+%å……ç”µç«™2
+Pch_CS2_disorder=sdpvar(1,24);%å……ç”µ
+Pdis_CS2_disorder=zeros(1,24);%æ”¾ç”µ
 S_CS2_disorder=sdpvar(1,24);%SOC
-f_CS2_disorder=Pch_CS2_disorder*[1:24]';%ÓÅÏÈ³äµçÔ­ÔòÄ¿±êº¯Êı
+f_CS2_disorder=Pch_CS2_disorder*[1:24]';%ä¼˜å…ˆå……ç”µåŸåˆ™ç›®æ ‡å‡½æ•°
 C_CS2_disorder=[0<=Pch_CS2_disorder<=Forecast_CS2(1,:),
     Forecast_CS2(3,:)<=S_CS2_disorder<=Forecast_CS2(4,:),
     S_CS2_disorder(1)==0.95*Pch_CS2_disorder(1)+Forecast_CS2(5,1),
-    S_CS2_disorder(2:24)==S_CS2_disorder(1:23)+0.95*Pch_CS2_disorder(2:24)+Forecast_CS2(5,2:24)];%Ô¼ÊøÌõ¼ş
+    S_CS2_disorder(2:24)==S_CS2_disorder(1:23)+0.95*Pch_CS2_disorder(2:24)+Forecast_CS2(5,2:24)];%çº¦æŸæ¡ä»¶
 solvesdp(C_CS2_disorder,f_CS2_disorder);
 Pch_CS2_disorder=double(Pch_CS2_disorder);
 S_CS2_disorder=double(S_CS2_disorder);
-%³äµçÕ¾3
-Pch_CS3_disorder=sdpvar(1,24);%³äµç
-Pdis_CS3_disorder=zeros(1,24);%·Åµç
+%å……ç”µç«™3
+Pch_CS3_disorder=sdpvar(1,24);%å……ç”µ
+Pdis_CS3_disorder=zeros(1,24);%æ”¾ç”µ
 S_CS3_disorder=sdpvar(1,24);%SOC
-f_CS3_disorder=Pch_CS3_disorder*[1:24]';%ÓÅÏÈ³äµçÔ­ÔòÄ¿±êº¯Êı
+f_CS3_disorder=Pch_CS3_disorder*[1:24]';%ä¼˜å…ˆå……ç”µåŸåˆ™ç›®æ ‡å‡½æ•°
 C_CS3_disorder=[0<=Pch_CS3_disorder<=Forecast_CS3(1,:),
     Forecast_CS3(3,:)<=S_CS3_disorder<=Forecast_CS3(4,:),
     S_CS3_disorder(1)==0.95*Pch_CS3_disorder(1)+Forecast_CS3(5,1),
-    S_CS3_disorder(2:24)==S_CS3_disorder(1:23)+0.95*Pch_CS3_disorder(2:24)+Forecast_CS3(5,2:24)];%Ô¼ÊøÌõ¼ş
+    S_CS3_disorder(2:24)==S_CS3_disorder(1:23)+0.95*Pch_CS3_disorder(2:24)+Forecast_CS3(5,2:24)];%çº¦æŸæ¡ä»¶
 solvesdp(C_CS3_disorder,f_CS3_disorder);
 Pch_CS3_disorder=double(Pch_CS3_disorder);
 S_CS3_disorder=double(S_CS3_disorder);
-%³äµçÕ¾4
-Pch_CS4_disorder=sdpvar(1,24);%³äµç
-Pdis_CS4_disorder=zeros(1,24);%·Åµç
+%å……ç”µç«™4
+Pch_CS4_disorder=sdpvar(1,24);%å……ç”µ
+Pdis_CS4_disorder=zeros(1,24);%æ”¾ç”µ
 S_CS4_disorder=sdpvar(1,24);%SOC
-f_CS4_disorder=Pch_CS4_disorder*[1:24]';%ÓÅÏÈ³äµçÔ­ÔòÄ¿±êº¯Êı
+f_CS4_disorder=Pch_CS4_disorder*[1:24]';%ä¼˜å…ˆå……ç”µåŸåˆ™ç›®æ ‡å‡½æ•°
 C_CS4_disorder=[0<=Pch_CS4_disorder<=Forecast_CS4(1,:),
     Forecast_CS4(3,:)<=S_CS4_disorder<=Forecast_CS4(4,:),
     S_CS4_disorder(1)==0.95*Pch_CS4_disorder(1)+Forecast_CS4(5,1),
-    S_CS4_disorder(2:24)==S_CS4_disorder(1:23)+0.95*Pch_CS4_disorder(2:24)+Forecast_CS4(5,2:24)];%Ô¼ÊøÌõ¼ş
+    S_CS4_disorder(2:24)==S_CS4_disorder(1:23)+0.95*Pch_CS4_disorder(2:24)+Forecast_CS4(5,2:24)];%çº¦æŸæ¡ä»¶
 solvesdp(C_CS4_disorder,f_CS4_disorder);
 Pch_CS4_disorder=double(Pch_CS4_disorder);
 S_CS4_disorder=double(S_CS4_disorder);
-%»æÍ¼£¬ÒÔ³äµçÕ¾3ÎªÀı
+%ç»˜å›¾ï¼Œä»¥å……ç”µç«™3ä¸ºä¾‹
 figure(1);
 hold on
-plot(Forecast_CS3(1,:),'b')%³äµç¹¦ÂÊ±ß½ç
-plot(-Forecast_CS3(2,:),'g')%·Åµç¹¦ÂÊ±ß½ç
+plot(Forecast_CS3(1,:),'b')%å……ç”µåŠŸç‡è¾¹ç•Œ
+plot(-Forecast_CS3(2,:),'g')%æ”¾ç”µåŠŸç‡è¾¹ç•Œ
 plot(Pch_CS3_disorder,'r.-')
-legend('³äµç¹¦ÂÊÉÏ½ç','·Åµç¹¦ÂÊÉÏ½ç','Êµ¼Ê³ä·Åµç¹¦ÂÊ')
-xlabel Ê±¼ä
-ylabel ¹¦ÂÊ(kW)
+legend('å……ç”µåŠŸç‡ä¸Šç•Œ','æ”¾ç”µåŠŸç‡ä¸Šç•Œ','å®é™…å……æ”¾ç”µåŠŸç‡')
+xlabel æ—¶é—´
+ylabel åŠŸç‡(kW)
 figure(2);
 hold on
-plot(Forecast_CS3(4,:),'g')%SOCÉÏ½ç
-plot(Forecast_CS3(3,:),'b')%SOCÏÂ½ç
+plot(Forecast_CS3(4,:),'g')%SOCä¸Šç•Œ
+plot(Forecast_CS3(3,:),'b')%SOCä¸‹ç•Œ
 plot(S_CS3_disorder,'r.-')
-legend('SOCÉÏ½ç','SOCÏÂ½ç','Êµ¼ÊSOC')
-xlabel Ê±¼ä
-ylabel ÈİÁ¿(kWh)
-%%%ÊµÊ±¿Éµ÷¶ÈÇ±Á¦¼ÆËã(²ÉÓÃ½á¹¹Ìå±£´æ)%%%
-%³äµçÕ¾1
+legend('SOCä¸Šç•Œ','SOCä¸‹ç•Œ','å®é™…SOC')
+xlabel æ—¶é—´
+ylabel å®¹é‡(kWh)
+%%%å®æ—¶å¯è°ƒåº¦æ½œåŠ›è®¡ç®—(é‡‡ç”¨ç»“æ„ä½“ä¿å­˜)%%%
+%å……ç”µç«™1
 RT_CS1.EV=[data_CS1(1001).Ta;data_CS1(1001).Tl;data_CS1(1001).S0]';
-RT_CS1.EV=sortrows(RT_CS1.EV,1);%°´ÕÕ½øÕ¾Ê±¼äÏÈºóË³ĞòÅÅĞò
-for t=1:96%·ÖÊ±¼ä¼ÆËã¿Éµ÷¶ÈÇ±Á¦
+RT_CS1.EV=sortrows(RT_CS1.EV,1);%æŒ‰ç…§è¿›ç«™æ—¶é—´å…ˆåé¡ºåºæ’åº
+for t=1:96%åˆ†æ—¶é—´è®¡ç®—å¯è°ƒåº¦æ½œåŠ›
     temp1=RT_CS1(1).EV(find(RT_CS1(1).EV(:,1)<=t),:);
-    RT_CS1(t).EVset=[temp1];%µÃµ½µç¶¯Æû³µ¼¯ºÏ
-    [temp2,temp3]=size(RT_CS1(t).EVset);%¾ØÕó³¤¶È£¬Ä¿µÄÊÇµÃµ½µç¶¯Æû³µµÄÊıÁ¿£¬temp2ÊÇÊıÁ¿
-    RT_CS1(t).X=zeros(temp2,96);%Í£²´×´Ì¬¾ØÕó
+    RT_CS1(t).EVset=[temp1];%å¾—åˆ°ç”µåŠ¨æ±½è½¦é›†åˆ
+    [temp2,temp3]=size(RT_CS1(t).EVset);%çŸ©é˜µé•¿åº¦ï¼Œç›®çš„æ˜¯å¾—åˆ°ç”µåŠ¨æ±½è½¦çš„æ•°é‡ï¼Œtemp2æ˜¯æ•°é‡
+    RT_CS1(t).X=zeros(temp2,96);%åœæ³ŠçŠ¶æ€çŸ©é˜µ
     for j=1:temp2
         RT_CS1(t).X(j,RT_CS1(t).EVset(j,1):RT_CS1(t).EVset(j,2))=1;
     end
     RT_CS1(t).EVset=RT_CS1(t).EVset';
-    if temp2~=1%Ö»ÓĞÒ»Á¾³µµÄÇé¿öÒªÌØÊâÌÖÂÛ£¬½÷É÷Ê¹ÓÃsum
+    if temp2~=1%åªæœ‰ä¸€è¾†è½¦çš„æƒ…å†µè¦ç‰¹æ®Šè®¨è®ºï¼Œè°¨æ…ä½¿ç”¨sum
         RT_CS1(t).Pch=6.6*sum(RT_CS1(t).X);
         RT_CS1(t).Pdis=6.6*sum(RT_CS1(t).X);
-        RT_CS1(t).Smin(1:95)=32*0.15*sum(RT_CS1(t).X(:,1:95))+(32*0.9-32*0.15)*sum(RT_CS1(t).X(:,1:95).*(RT_CS1(t).X(:,1:95)-RT_CS1(t).X(:,2:96)));%¹ãÒå´¢ÄÜµÄ×îĞ¡ÈİÁ¿
+        RT_CS1(t).Smin(1:95)=32*0.15*sum(RT_CS1(t).X(:,1:95))+(32*0.9-32*0.15)*sum(RT_CS1(t).X(:,1:95).*(RT_CS1(t).X(:,1:95)-RT_CS1(t).X(:,2:96)));%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å°å®¹é‡
         RT_CS1(t).Smin(96)=32*0.9*sum(RT_CS1(t).X(:,96));
-        RT_CS1(t).Smax=32*0.9*sum(RT_CS1(t).X);%¹ãÒå´¢ÄÜµÄ×î´óÈİÁ¿
-        RT_CS1(t).dS=zeros(1,96);%¹ãÒå´¢ÄÜµÄÈİÁ¿±ä»¯Á¿
+        RT_CS1(t).Smax=32*0.9*sum(RT_CS1(t).X);%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å¤§å®¹é‡
+        RT_CS1(t).dS=zeros(1,96);%å¹¿ä¹‰å‚¨èƒ½çš„å®¹é‡å˜åŒ–é‡
         RT_CS1(t).dS(1)=RT_CS1(t).EVset(3,:)*RT_CS1(t).X(:,1);
         RT_CS1(t).dS(2:96)=RT_CS1(t).EVset(3,:)*(RT_CS1(t).X(:,2:96).*(RT_CS1(t).X(:,2:96)-RT_CS1(t).X(:,1:95)))-32*0.9*sum(RT_CS1(t).X(:,1:95).*(RT_CS1(t).X(:,1:95)-RT_CS1(t).X(:,2:96)));
     else
         RT_CS1(t).Pch=6.6*RT_CS1(t).X;
         RT_CS1(t).Pdis=6.6*RT_CS1(t).X;
-        RT_CS1(t).Smin(1:95)=32*0.15*RT_CS1(t).X(:,1:95)+(32*0.9-32*0.15)*(RT_CS1(t).X(:,1:95).*(RT_CS1(t).X(:,1:95)-RT_CS1(t).X(:,2:96)));%¹ãÒå´¢ÄÜµÄ×îĞ¡ÈİÁ¿
+        RT_CS1(t).Smin(1:95)=32*0.15*RT_CS1(t).X(:,1:95)+(32*0.9-32*0.15)*(RT_CS1(t).X(:,1:95).*(RT_CS1(t).X(:,1:95)-RT_CS1(t).X(:,2:96)));%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å°å®¹é‡
         RT_CS1(t).Smin(96)=32*0.9*(RT_CS1(t).X(:,96));
-        RT_CS1(t).Smax=32*0.9*(RT_CS1(t).X);%¹ãÒå´¢ÄÜµÄ×î´óÈİÁ¿
-        RT_CS1(t).dS=zeros(1,96);%¹ãÒå´¢ÄÜµÄÈİÁ¿±ä»¯Á¿
+        RT_CS1(t).Smax=32*0.9*(RT_CS1(t).X);%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å¤§å®¹é‡
+        RT_CS1(t).dS=zeros(1,96);%å¹¿ä¹‰å‚¨èƒ½çš„å®¹é‡å˜åŒ–é‡
         RT_CS1(t).dS(1)=RT_CS1(t).EVset(3,:)*RT_CS1(t).X(:,1);
         RT_CS1(t).dS(2:96)=RT_CS1(t).EVset(3,:)*(RT_CS1(t).X(:,2:96).*(RT_CS1(t).X(:,2:96)-RT_CS1(t).X(:,1:95)))-32*0.9*(RT_CS1(t).X(:,1:95).*(RT_CS1(t).X(:,1:95)-RT_CS1(t).X(:,2:96)));
     end
 end
-%³äµçÕ¾2
+%å……ç”µç«™2
 RT_CS2.EV=[data_CS2(1001).Ta;data_CS2(1001).Tl;data_CS2(1001).S0]';
-RT_CS2.EV=sortrows(RT_CS2.EV,1);%°´ÕÕ½øÕ¾Ê±¼äÏÈºóË³ĞòÅÅĞò
-for t=1:96%·ÖÊ±¼ä¼ÆËã¿Éµ÷¶ÈÇ±Á¦
+RT_CS2.EV=sortrows(RT_CS2.EV,1);%æŒ‰ç…§è¿›ç«™æ—¶é—´å…ˆåé¡ºåºæ’åº
+for t=1:96%åˆ†æ—¶é—´è®¡ç®—å¯è°ƒåº¦æ½œåŠ›
     temp1=RT_CS2(1).EV(find(RT_CS2(1).EV(:,1)<=t),:);
-    RT_CS2(t).EVset=[temp1];%µÃµ½µç¶¯Æû³µ¼¯ºÏ
-    [temp2,temp3]=size(RT_CS2(t).EVset);%¾ØÕó³¤¶È£¬Ä¿µÄÊÇµÃµ½µç¶¯Æû³µµÄÊıÁ¿£¬temp2ÊÇÊıÁ¿
-    RT_CS2(t).X=zeros(temp2,96);%Í£²´×´Ì¬¾ØÕó
+    RT_CS2(t).EVset=[temp1];%å¾—åˆ°ç”µåŠ¨æ±½è½¦é›†åˆ
+    [temp2,temp3]=size(RT_CS2(t).EVset);%çŸ©é˜µé•¿åº¦ï¼Œç›®çš„æ˜¯å¾—åˆ°ç”µåŠ¨æ±½è½¦çš„æ•°é‡ï¼Œtemp2æ˜¯æ•°é‡
+    RT_CS2(t).X=zeros(temp2,96);%åœæ³ŠçŠ¶æ€çŸ©é˜µ
     for j=1:temp2
         RT_CS2(t).X(j,RT_CS2(t).EVset(j,1):RT_CS2(t).EVset(j,2))=1;
     end
     RT_CS2(t).EVset=RT_CS2(t).EVset';
-    if temp2~=1%Ö»ÓĞÒ»Á¾³µµÄÇé¿öÒªÌØÊâÌÖÂÛ£¬½÷É÷Ê¹ÓÃsum
+    if temp2~=1%åªæœ‰ä¸€è¾†è½¦çš„æƒ…å†µè¦ç‰¹æ®Šè®¨è®ºï¼Œè°¨æ…ä½¿ç”¨sum
         RT_CS2(t).Pch=6.6*sum(RT_CS2(t).X);
         RT_CS2(t).Pdis=6.6*sum(RT_CS2(t).X);
-        RT_CS2(t).Smin(1:95)=32*0.15*sum(RT_CS2(t).X(:,1:95))+(32*0.9-32*0.15)*sum(RT_CS2(t).X(:,1:95).*(RT_CS2(t).X(:,1:95)-RT_CS2(t).X(:,2:96)));%¹ãÒå´¢ÄÜµÄ×îĞ¡ÈİÁ¿
+        RT_CS2(t).Smin(1:95)=32*0.15*sum(RT_CS2(t).X(:,1:95))+(32*0.9-32*0.15)*sum(RT_CS2(t).X(:,1:95).*(RT_CS2(t).X(:,1:95)-RT_CS2(t).X(:,2:96)));%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å°å®¹é‡
         RT_CS2(t).Smin(96)=32*0.9*sum(RT_CS2(t).X(:,96));
-        RT_CS2(t).Smax=32*0.9*sum(RT_CS2(t).X);%¹ãÒå´¢ÄÜµÄ×î´óÈİÁ¿
-        RT_CS2(t).dS=zeros(1,96);%¹ãÒå´¢ÄÜµÄÈİÁ¿±ä»¯Á¿
+        RT_CS2(t).Smax=32*0.9*sum(RT_CS2(t).X);%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å¤§å®¹é‡
+        RT_CS2(t).dS=zeros(1,96);%å¹¿ä¹‰å‚¨èƒ½çš„å®¹é‡å˜åŒ–é‡
         RT_CS2(t).dS(1)=RT_CS2(t).EVset(3,:)*RT_CS2(t).X(:,1);
         RT_CS2(t).dS(2:96)=RT_CS2(t).EVset(3,:)*(RT_CS2(t).X(:,2:96).*(RT_CS2(t).X(:,2:96)-RT_CS2(t).X(:,1:95)))-32*0.9*sum(RT_CS2(t).X(:,1:95).*(RT_CS2(t).X(:,1:95)-RT_CS2(t).X(:,2:96)));
     else
         RT_CS2(t).Pch=6.6*RT_CS2(t).X;
         RT_CS2(t).Pdis=6.6*RT_CS2(t).X;
-        RT_CS2(t).Smin(1:95)=32*0.15*RT_CS2(t).X(:,1:95)+(32*0.9-32*0.15)*(RT_CS2(t).X(:,1:95).*(RT_CS2(t).X(:,1:95)-RT_CS2(t).X(:,2:96)));%¹ãÒå´¢ÄÜµÄ×îĞ¡ÈİÁ¿
+        RT_CS2(t).Smin(1:95)=32*0.15*RT_CS2(t).X(:,1:95)+(32*0.9-32*0.15)*(RT_CS2(t).X(:,1:95).*(RT_CS2(t).X(:,1:95)-RT_CS2(t).X(:,2:96)));%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å°å®¹é‡
         RT_CS2(t).Smin(96)=32*0.9*(RT_CS2(t).X(:,96));
-        RT_CS2(t).Smax=32*0.9*(RT_CS2(t).X);%¹ãÒå´¢ÄÜµÄ×î´óÈİÁ¿
-        RT_CS2(t).dS=zeros(1,96);%¹ãÒå´¢ÄÜµÄÈİÁ¿±ä»¯Á¿
+        RT_CS2(t).Smax=32*0.9*(RT_CS2(t).X);%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å¤§å®¹é‡
+        RT_CS2(t).dS=zeros(1,96);%å¹¿ä¹‰å‚¨èƒ½çš„å®¹é‡å˜åŒ–é‡
         RT_CS2(t).dS(1)=RT_CS2(t).EVset(3,:)*RT_CS2(t).X(:,1);
         RT_CS2(t).dS(2:96)=RT_CS2(t).EVset(3,:)*(RT_CS2(t).X(:,2:96).*(RT_CS2(t).X(:,2:96)-RT_CS2(t).X(:,1:95)))-32*0.9*(RT_CS2(t).X(:,1:95).*(RT_CS2(t).X(:,1:95)-RT_CS2(t).X(:,2:96)));
     end
 end
-%³äµçÕ¾3
+%å……ç”µç«™3
 RT_CS3.EV=[data_CS3(1001).Ta;data_CS3(1001).Tl;data_CS3(1001).S0]';
-RT_CS3.EV=sortrows(RT_CS3.EV,1);%°´ÕÕ½øÕ¾Ê±¼äÏÈºóË³ĞòÅÅĞò
-for t=1:96%·ÖÊ±¼ä¼ÆËã¿Éµ÷¶ÈÇ±Á¦
+RT_CS3.EV=sortrows(RT_CS3.EV,1);%æŒ‰ç…§è¿›ç«™æ—¶é—´å…ˆåé¡ºåºæ’åº
+for t=1:96%åˆ†æ—¶é—´è®¡ç®—å¯è°ƒåº¦æ½œåŠ›
     temp1=RT_CS3(1).EV(find(RT_CS3(1).EV(:,1)<=t),:);
-    RT_CS3(t).EVset=[temp1];%µÃµ½µç¶¯Æû³µ¼¯ºÏ
-    [temp2,temp3]=size(RT_CS3(t).EVset);%¾ØÕó³¤¶È£¬Ä¿µÄÊÇµÃµ½µç¶¯Æû³µµÄÊıÁ¿£¬temp2ÊÇÊıÁ¿
-    RT_CS3(t).X=zeros(temp2,96);%Í£²´×´Ì¬¾ØÕó
+    RT_CS3(t).EVset=[temp1];%å¾—åˆ°ç”µåŠ¨æ±½è½¦é›†åˆ
+    [temp2,temp3]=size(RT_CS3(t).EVset);%çŸ©é˜µé•¿åº¦ï¼Œç›®çš„æ˜¯å¾—åˆ°ç”µåŠ¨æ±½è½¦çš„æ•°é‡ï¼Œtemp2æ˜¯æ•°é‡
+    RT_CS3(t).X=zeros(temp2,96);%åœæ³ŠçŠ¶æ€çŸ©é˜µ
     for j=1:temp2
         RT_CS3(t).X(j,RT_CS3(t).EVset(j,1):RT_CS3(t).EVset(j,2))=1;
     end
     RT_CS3(t).EVset=RT_CS3(t).EVset';
-    if temp2~=1%Ö»ÓĞÒ»Á¾³µµÄÇé¿öÒªÌØÊâÌÖÂÛ£¬½÷É÷Ê¹ÓÃsum
+    if temp2~=1%åªæœ‰ä¸€è¾†è½¦çš„æƒ…å†µè¦ç‰¹æ®Šè®¨è®ºï¼Œè°¨æ…ä½¿ç”¨sum
         RT_CS3(t).Pch=6.6*sum(RT_CS3(t).X);
         RT_CS3(t).Pdis=6.6*sum(RT_CS3(t).X);
-        RT_CS3(t).Smin(1:95)=32*0.15*sum(RT_CS3(t).X(:,1:95))+(32*0.9-32*0.15)*sum(RT_CS3(t).X(:,1:95).*(RT_CS3(t).X(:,1:95)-RT_CS3(t).X(:,2:96)));%¹ãÒå´¢ÄÜµÄ×îĞ¡ÈİÁ¿
+        RT_CS3(t).Smin(1:95)=32*0.15*sum(RT_CS3(t).X(:,1:95))+(32*0.9-32*0.15)*sum(RT_CS3(t).X(:,1:95).*(RT_CS3(t).X(:,1:95)-RT_CS3(t).X(:,2:96)));%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å°å®¹é‡
         RT_CS3(t).Smin(96)=32*0.9*sum(RT_CS3(t).X(:,96));
-        RT_CS3(t).Smax=32*0.9*sum(RT_CS3(t).X);%¹ãÒå´¢ÄÜµÄ×î´óÈİÁ¿
-        RT_CS3(t).dS=zeros(1,96);%¹ãÒå´¢ÄÜµÄÈİÁ¿±ä»¯Á¿
+        RT_CS3(t).Smax=32*0.9*sum(RT_CS3(t).X);%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å¤§å®¹é‡
+        RT_CS3(t).dS=zeros(1,96);%å¹¿ä¹‰å‚¨èƒ½çš„å®¹é‡å˜åŒ–é‡
         RT_CS3(t).dS(1)=RT_CS3(t).EVset(3,:)*RT_CS3(t).X(:,1);
         RT_CS3(t).dS(2:96)=RT_CS3(t).EVset(3,:)*(RT_CS3(t).X(:,2:96).*(RT_CS3(t).X(:,2:96)-RT_CS3(t).X(:,1:95)))-32*0.9*sum(RT_CS3(t).X(:,1:95).*(RT_CS3(t).X(:,1:95)-RT_CS3(t).X(:,2:96)));
     else
         RT_CS3(t).Pch=6.6*RT_CS3(t).X;
         RT_CS3(t).Pdis=6.6*RT_CS3(t).X;
-        RT_CS3(t).Smin(1:95)=32*0.15*RT_CS3(t).X(:,1:95)+(32*0.9-32*0.15)*(RT_CS3(t).X(:,1:95).*(RT_CS3(t).X(:,1:95)-RT_CS3(t).X(:,2:96)));%¹ãÒå´¢ÄÜµÄ×îĞ¡ÈİÁ¿
+        RT_CS3(t).Smin(1:95)=32*0.15*RT_CS3(t).X(:,1:95)+(32*0.9-32*0.15)*(RT_CS3(t).X(:,1:95).*(RT_CS3(t).X(:,1:95)-RT_CS3(t).X(:,2:96)));%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å°å®¹é‡
         RT_CS3(t).Smin(96)=32*0.9*(RT_CS3(t).X(:,96));
-        RT_CS3(t).Smax=32*0.9*(RT_CS3(t).X);%¹ãÒå´¢ÄÜµÄ×î´óÈİÁ¿
-        RT_CS3(t).dS=zeros(1,96);%¹ãÒå´¢ÄÜµÄÈİÁ¿±ä»¯Á¿
+        RT_CS3(t).Smax=32*0.9*(RT_CS3(t).X);%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å¤§å®¹é‡
+        RT_CS3(t).dS=zeros(1,96);%å¹¿ä¹‰å‚¨èƒ½çš„å®¹é‡å˜åŒ–é‡
         RT_CS3(t).dS(1)=RT_CS3(t).EVset(3,:)*RT_CS3(t).X(:,1);
         RT_CS3(t).dS(2:96)=RT_CS3(t).EVset(3,:)*(RT_CS3(t).X(:,2:96).*(RT_CS3(t).X(:,2:96)-RT_CS3(t).X(:,1:95)))-32*0.9*(RT_CS3(t).X(:,1:95).*(RT_CS3(t).X(:,1:95)-RT_CS3(t).X(:,2:96)));
     end
 end
-%³äµçÕ¾4
+%å……ç”µç«™4
 RT_CS4.EV=[data_CS4(1001).Ta;data_CS4(1001).Tl;data_CS4(1001).S0]';
-RT_CS4.EV=sortrows(RT_CS4.EV,1);%°´ÕÕ½øÕ¾Ê±¼äÏÈºóË³ĞòÅÅĞò
-for t=1:96%·ÖÊ±¼ä¼ÆËã¿Éµ÷¶ÈÇ±Á¦
+RT_CS4.EV=sortrows(RT_CS4.EV,1);%æŒ‰ç…§è¿›ç«™æ—¶é—´å…ˆåé¡ºåºæ’åº
+for t=1:96%åˆ†æ—¶é—´è®¡ç®—å¯è°ƒåº¦æ½œåŠ›
     temp1=RT_CS4(1).EV(find(RT_CS4(1).EV(:,1)<=t),:);
-    RT_CS4(t).EVset=[temp1];%µÃµ½µç¶¯Æû³µ¼¯ºÏ
-    [temp2,temp3]=size(RT_CS4(t).EVset);%¾ØÕó³¤¶È£¬Ä¿µÄÊÇµÃµ½µç¶¯Æû³µµÄÊıÁ¿£¬temp2ÊÇÊıÁ¿
-    RT_CS4(t).X=zeros(temp2,96);%Í£²´×´Ì¬¾ØÕó
+    RT_CS4(t).EVset=[temp1];%å¾—åˆ°ç”µåŠ¨æ±½è½¦é›†åˆ
+    [temp2,temp3]=size(RT_CS4(t).EVset);%çŸ©é˜µé•¿åº¦ï¼Œç›®çš„æ˜¯å¾—åˆ°ç”µåŠ¨æ±½è½¦çš„æ•°é‡ï¼Œtemp2æ˜¯æ•°é‡
+    RT_CS4(t).X=zeros(temp2,96);%åœæ³ŠçŠ¶æ€çŸ©é˜µ
     for j=1:temp2
         RT_CS4(t).X(j,RT_CS4(t).EVset(j,1):RT_CS4(t).EVset(j,2))=1;
     end
     RT_CS4(t).EVset=RT_CS4(t).EVset';
-    if temp2~=1%Ö»ÓĞÒ»Á¾³µµÄÇé¿öÒªÌØÊâÌÖÂÛ£¬½÷É÷Ê¹ÓÃsum
+    if temp2~=1%åªæœ‰ä¸€è¾†è½¦çš„æƒ…å†µè¦ç‰¹æ®Šè®¨è®ºï¼Œè°¨æ…ä½¿ç”¨sum
         RT_CS4(t).Pch=6.6*sum(RT_CS4(t).X);
         RT_CS4(t).Pdis=6.6*sum(RT_CS4(t).X);
-        RT_CS4(t).Smin(1:95)=32*0.15*sum(RT_CS4(t).X(:,1:95))+(32*0.9-32*0.15)*sum(RT_CS4(t).X(:,1:95).*(RT_CS4(t).X(:,1:95)-RT_CS4(t).X(:,2:96)));%¹ãÒå´¢ÄÜµÄ×îĞ¡ÈİÁ¿
+        RT_CS4(t).Smin(1:95)=32*0.15*sum(RT_CS4(t).X(:,1:95))+(32*0.9-32*0.15)*sum(RT_CS4(t).X(:,1:95).*(RT_CS4(t).X(:,1:95)-RT_CS4(t).X(:,2:96)));%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å°å®¹é‡
         RT_CS4(t).Smin(96)=32*0.9*sum(RT_CS4(t).X(:,96));
-        RT_CS4(t).Smax=32*0.9*sum(RT_CS4(t).X);%¹ãÒå´¢ÄÜµÄ×î´óÈİÁ¿
-        RT_CS4(t).dS=zeros(1,96);%¹ãÒå´¢ÄÜµÄÈİÁ¿±ä»¯Á¿
+        RT_CS4(t).Smax=32*0.9*sum(RT_CS4(t).X);%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å¤§å®¹é‡
+        RT_CS4(t).dS=zeros(1,96);%å¹¿ä¹‰å‚¨èƒ½çš„å®¹é‡å˜åŒ–é‡
         RT_CS4(t).dS(1)=RT_CS4(t).EVset(3,:)*RT_CS4(t).X(:,1);
         RT_CS4(t).dS(2:96)=RT_CS4(t).EVset(3,:)*(RT_CS4(t).X(:,2:96).*(RT_CS4(t).X(:,2:96)-RT_CS4(t).X(:,1:95)))-32*0.9*sum(RT_CS4(t).X(:,1:95).*(RT_CS4(t).X(:,1:95)-RT_CS4(t).X(:,2:96)));
     else
         RT_CS4(t).Pch=6.6*RT_CS4(t).X;
         RT_CS4(t).Pdis=6.6*RT_CS4(t).X;
-        RT_CS4(t).Smin(1:95)=32*0.15*RT_CS4(t).X(:,1:95)+(32*0.9-32*0.15)*(RT_CS4(t).X(:,1:95).*(RT_CS4(t).X(:,1:95)-RT_CS4(t).X(:,2:96)));%¹ãÒå´¢ÄÜµÄ×îĞ¡ÈİÁ¿
+        RT_CS4(t).Smin(1:95)=32*0.15*RT_CS4(t).X(:,1:95)+(32*0.9-32*0.15)*(RT_CS4(t).X(:,1:95).*(RT_CS4(t).X(:,1:95)-RT_CS4(t).X(:,2:96)));%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å°å®¹é‡
         RT_CS4(t).Smin(96)=32*0.9*(RT_CS4(t).X(:,96));
-        RT_CS4(t).Smax=32*0.9*(RT_CS4(t).X);%¹ãÒå´¢ÄÜµÄ×î´óÈİÁ¿
-        RT_CS4(t).dS=zeros(1,96);%¹ãÒå´¢ÄÜµÄÈİÁ¿±ä»¯Á¿
+        RT_CS4(t).Smax=32*0.9*(RT_CS4(t).X);%å¹¿ä¹‰å‚¨èƒ½çš„æœ€å¤§å®¹é‡
+        RT_CS4(t).dS=zeros(1,96);%å¹¿ä¹‰å‚¨èƒ½çš„å®¹é‡å˜åŒ–é‡
         RT_CS4(t).dS(1)=RT_CS4(t).EVset(3,:)*RT_CS4(t).X(:,1);
         RT_CS4(t).dS(2:96)=RT_CS4(t).EVset(3,:)*(RT_CS4(t).X(:,2:96).*(RT_CS4(t).X(:,2:96)-RT_CS4(t).X(:,1:95)))-32*0.9*(RT_CS4(t).X(:,1:95).*(RT_CS4(t).X(:,1:95)-RT_CS4(t).X(:,2:96)));
     end
 end
-%»­Í¼£¬ÒÔ³äµçÕ¾3ÎªÀı
-figure(3)%µÚ24¸ö15·ÖÖÓ
+%ç”»å›¾ï¼Œä»¥å……ç”µç«™3ä¸ºä¾‹
+figure(3)%ç¬¬24ä¸ª15åˆ†é’Ÿ
 hold on
-plot(RT_CS3(24).Pch,'b')%³äµç¹¦ÂÊ±ß½ç
-plot(-RT_CS3(24).Pdis,'g')%·Åµç¹¦ÂÊ±ß½ç
-legend('³äµç¹¦ÂÊÉÏ½ç','·Åµç¹¦ÂÊÉÏ½ç')
-xlabel Ê±¼ä
-ylabel ¹¦ÂÊ(kW)
+plot(RT_CS3(24).Pch,'b')%å……ç”µåŠŸç‡è¾¹ç•Œ
+plot(-RT_CS3(24).Pdis,'g')%æ”¾ç”µåŠŸç‡è¾¹ç•Œ
+legend('å……ç”µåŠŸç‡ä¸Šç•Œ','æ”¾ç”µåŠŸç‡ä¸Šç•Œ')
+xlabel æ—¶é—´
+ylabel åŠŸç‡(kW)
 figure(4);
 hold on
-plot(RT_CS3(24).Smin,'b')%SOCÉÏ½ç
-plot(RT_CS3(24).Smax,'g')%SOCÏÂ½ç
-legend('SOCÉÏ½ç','SOCÏÂ½ç')
-xlabel Ê±¼ä
-ylabel ÈİÁ¿(kWh)
-figure(5)%ÓëÈÕÇ°¶Ô±È
-tol=(24-1)/(96-1);%Ê±Ğò»»Ëã
+plot(RT_CS3(24).Smin,'b')%SOCä¸Šç•Œ
+plot(RT_CS3(24).Smax,'g')%SOCä¸‹ç•Œ
+legend('SOCä¸Šç•Œ','SOCä¸‹ç•Œ')
+xlabel æ—¶é—´
+ylabel å®¹é‡(kWh)
+figure(5)%ä¸æ—¥å‰å¯¹æ¯”
+tol=(24-1)/(96-1);%æ—¶åºæ¢ç®—
 step=1:tol:24;
 hold on
-plot(Forecast_CS3(1,:),'b')%³äµç¹¦ÂÊ±ß½ç
-plot(-Forecast_CS3(2,:),'g')%·Åµç¹¦ÂÊ±ß½ç
-plot(step,RT_CS3(96).Pch,'b.-')%³äµç¹¦ÂÊ±ß½ç
-plot(step,-RT_CS3(96).Pdis,'g.-')%·Åµç¹¦ÂÊ±ß½ç
-legend('ÈÕÇ°³äµç¹¦ÂÊÉÏ½ç','ÈÕÇ°·Åµç¹¦ÂÊÉÏ½ç')
-xlabel Ê±¼ä
-ylabel ¹¦ÂÊ(kW)
+plot(Forecast_CS3(1,:),'b')%å……ç”µåŠŸç‡è¾¹ç•Œ
+plot(-Forecast_CS3(2,:),'g')%æ”¾ç”µåŠŸç‡è¾¹ç•Œ
+plot(step,RT_CS3(96).Pch,'b.-')%å……ç”µåŠŸç‡è¾¹ç•Œ
+plot(step,-RT_CS3(96).Pdis,'g.-')%æ”¾ç”µåŠŸç‡è¾¹ç•Œ
+legend('æ—¥å‰å……ç”µåŠŸç‡ä¸Šç•Œ','æ—¥å‰æ”¾ç”µåŠŸç‡ä¸Šç•Œ')
+xlabel æ—¶é—´
+ylabel åŠŸç‡(kW)
 figure(6);
 hold on
-plot(Forecast_CS3(4,:),'b')%SOCÉÏ½ç
-plot(Forecast_CS3(3,:),'g')%SOCÏÂ½ç
-plot(step,RT_CS3(96).Smin,'b.-')%SOCÉÏ½ç
-plot(step,RT_CS3(96).Smax,'g.-')%SOCÏÂ½ç
-legend('ÈÕÇ°SOCÉÏ½ç','ÈÕÇ°SOCÏÂ½ç')
-xlabel Ê±¼ä
-ylabel ÈİÁ¿(kWh)
-%%%Êı¾İ¼¯ºÏ%%%
-save('data_DA_potential','Forecast_CS1','Forecast_CS2','Forecast_CS3','Forecast_CS4');%ÈÕÇ°¿Éµ÷¶ÈÇ±Á¦
-save('data_RT_potential','RT_CS1','RT_CS2','RT_CS3','RT_CS4');%ÊµÊ±¿Éµ÷¶ÈÇ±Á¦
-save('data_disorder','Pch_CS1_disorder','Pch_CS2_disorder','Pch_CS3_disorder','Pch_CS4_disorder');%ÎŞĞò³äµçÊı¾İ
-save('data_EV','data_CS1','data_CS2','data_CS3','data_CS4');%µç¶¯Æû³µ³éÑùÊı¾İ
-%% µÚ¶ş½Ú£¬ÎŞĞò³äµçÍ¶±ê
+plot(Forecast_CS3(4,:),'b')%SOCä¸Šç•Œ
+plot(Forecast_CS3(3,:),'g')%SOCä¸‹ç•Œ
+plot(step,RT_CS3(96).Smin,'b.-')%SOCä¸Šç•Œ
+plot(step,RT_CS3(96).Smax,'g.-')%SOCä¸‹ç•Œ
+legend('æ—¥å‰SOCä¸Šç•Œ','æ—¥å‰SOCä¸‹ç•Œ')
+xlabel æ—¶é—´
+ylabel å®¹é‡(kWh)
+%%%æ•°æ®é›†åˆ%%%
+save('data_DA_potential','Forecast_CS1','Forecast_CS2','Forecast_CS3','Forecast_CS4');%æ—¥å‰å¯è°ƒåº¦æ½œåŠ›
+save('data_RT_potential','RT_CS1','RT_CS2','RT_CS3','RT_CS4');%å®æ—¶å¯è°ƒåº¦æ½œåŠ›
+save('data_disorder','Pch_CS1_disorder','Pch_CS2_disorder','Pch_CS3_disorder','Pch_CS4_disorder');%æ— åºå……ç”µæ•°æ®
+save('data_EV','data_CS1','data_CS2','data_CS3','data_CS4');%ç”µåŠ¨æ±½è½¦æŠ½æ ·æ•°æ®
+%% ç¬¬äºŒèŠ‚ï¼Œæ— åºå……ç”µæŠ•æ ‡
 clear
 clc
 close all
 load data_disorder
-Pch=[Pch_CS1_disorder;Pch_CS2_disorder;Pch_CS3_disorder;Pch_CS4_disorder];%³äµçÕ¾³äµç¹¦ÂÊ
-%ÊĞ³¡³öÇåÎÊÌâ
+Pch=[Pch_CS1_disorder;Pch_CS2_disorder;Pch_CS3_disorder;Pch_CS4_disorder];%å……ç”µç«™å……ç”µåŠŸç‡
+%å¸‚åœºå‡ºæ¸…é—®é¢˜
 Loadcurve=[0.955391944564747,0.978345604157644,1,0.995019488956258,0.972932005197055,0.970333477695972,0.930489389346037,0.890428757037679,0.902771762667822,0.941966219142486,0.911000433087917,0.862061498484192,0.840190558683413,0.831095712429623,0.756604590731919,0.671719359029883,0.611520138588133,0.582936336076224,0.572542226071893,0.574707665656128,0.587267215244695,0.644218276310091,0.755521870939801,0.884798614118666];
-PL_base=[5.704;5.705;5.631;6.518;4.890;5.705;5.847]*1000;%¸ººÉ·Ö²¼
-PL=PL_base*Loadcurve;%»ù´¡¸ººÉ(¸ººÉÇúÏß´Ó08:00¿ªÊ¼ËãÆğ£¬¼´µÚ9¸öÊ±¶Î)
-Pf=sdpvar(7,24);%À¡Ïß¹¦ÂÊ
-Pf(1,:)=PL(1,:)+Pch(1,:);Pf(2,:)=PL(2,:);Pf(3,:)=PL(3,:);Pf(4,:)=PL(4,:)+Pch(2,:);Pf(5,:)=PL(5,:)+Pch(3,:);Pf(6,:)=PL(6,:);Pf(7,:)=PL(7,:)+Pch(4,:);%À¡Ïß¹¦ÂÊ×é³É
-Pg=sdpvar(10,24);%·¢µçÉÌ·Ö¶ÎµçÁ¿
-Pg_step=1000*[20,5,3,2,2,2,2,2,2,inf]';%±¨¼ÛÇø¼ä
-Price_DSO=[3:12]'*0.1;%·Ö¶Îµç¼Û
-Obj=sum(sum((Price_DSO*ones(1,24)).*Pg));%Ä¿±êÎªÓÃµç·ÑÓÃ×îĞ¡
-Constraint=[0<=Pg<=Pg_step*ones(1,24),sum(Pg)==sum(Pf)];%Ô¼ÊøÌõ¼ş
-solvesdp(Constraint,Obj);%Çó½âÏßĞÔ¹æ»®ÎÊÌâ
-Pg=double(Pg);%·¢µç»ú¹¦ÂÊ
-Pf=double(Pf);%À¡Ïß¹¦ÂÊ
-isPg=(Pg>0);%ÎªÁË¼ÆËã³öÇåµç¼Û£¬¼ÆËã·¢µç»ú·Ö¶ÎÑ¡ÔñÇé¿ö
-DLMP=sum(isPg)/10+0.2;%³öÇåµç¼Û¼ÆËã
-%»æÍ¼
-figure(1)%½Úµã±ß¼Êµç¼Û
+PL_base=[5.704;5.705;5.631;6.518;4.890;5.705;5.847]*1000;%è´Ÿè·åˆ†å¸ƒ
+PL=PL_base*Loadcurve;%åŸºç¡€è´Ÿè·(è´Ÿè·æ›²çº¿ä»08:00å¼€å§‹ç®—èµ·ï¼Œå³ç¬¬9ä¸ªæ—¶æ®µ)
+Pf=sdpvar(7,24);%é¦ˆçº¿åŠŸç‡
+Pf(1,:)=PL(1,:)+Pch(1,:);Pf(2,:)=PL(2,:);Pf(3,:)=PL(3,:);Pf(4,:)=PL(4,:)+Pch(2,:);Pf(5,:)=PL(5,:)+Pch(3,:);Pf(6,:)=PL(6,:);Pf(7,:)=PL(7,:)+Pch(4,:);%é¦ˆçº¿åŠŸç‡ç»„æˆ
+Pg=sdpvar(10,24);%å‘ç”µå•†åˆ†æ®µç”µé‡
+Pg_step=1000*[20,5,3,2,2,2,2,2,2,inf]';%æŠ¥ä»·åŒºé—´
+Price_DSO=[3:12]'*0.1;%åˆ†æ®µç”µä»·
+Obj=sum(sum((Price_DSO*ones(1,24)).*Pg));%ç›®æ ‡ä¸ºç”¨ç”µè´¹ç”¨æœ€å°
+Constraint=[0<=Pg<=Pg_step*ones(1,24),sum(Pg)==sum(Pf)];%çº¦æŸæ¡ä»¶
+solvesdp(Constraint,Obj);%æ±‚è§£çº¿æ€§è§„åˆ’é—®é¢˜
+Pg=double(Pg);%å‘ç”µæœºåŠŸç‡
+Pf=double(Pf);%é¦ˆçº¿åŠŸç‡
+isPg=(Pg>0);%ä¸ºäº†è®¡ç®—å‡ºæ¸…ç”µä»·ï¼Œè®¡ç®—å‘ç”µæœºåˆ†æ®µé€‰æ‹©æƒ…å†µ
+DLMP=sum(isPg)/10+0.2;%å‡ºæ¸…ç”µä»·è®¡ç®—
+%ç»˜å›¾
+figure(1)%èŠ‚ç‚¹è¾¹é™…ç”µä»·
 stairs(DLMP);
-xlabel Ê±¼ä
-ylabel µç¼Û(Ôª/kWh)
+xlabel æ—¶é—´
+ylabel ç”µä»·(å…ƒ/kWh)
 ylim([0.3,1.3])
-figure(2)%¸ººÉÇúÏß
+figure(2)%è´Ÿè·æ›²çº¿
 hold on
 plot(sum(PL)/1000);
 plot(sum(Pf)/1000,'r.-');
-xlabel Ê±¼ä
-ylabel ¸ººÉ(MW)
-legend('»ù´¡¸ººÉ','ÎŞĞò³äµç¸ººÉ')
-Cost=sum(sum(Pch).*DLMP);%×ÜÓÃµç·ÑÓÃ
-result_disorder.Cost=Cost;result_disorder.DLMP=DLMP;result_disorder.Pf=Pf;result_disorder.Pg=Pg;%½á¹û±£´æ
+xlabel æ—¶é—´
+ylabel è´Ÿè·(MW)
+legend('åŸºç¡€è´Ÿè·','æ— åºå……ç”µè´Ÿè·')
+Cost=sum(sum(Pch).*DLMP);%æ€»ç”¨ç”µè´¹ç”¨
+result_disorder.Cost=Cost;result_disorder.DLMP=DLMP;result_disorder.Pf=Pf;result_disorder.Pg=Pg;%ç»“æœä¿å­˜
 save('result_disorder','result_disorder');
-%% µÚÈı½Ú£¬ÈÕÇ°Í¶±ê²ßÂÔ
+%% ç¬¬ä¸‰èŠ‚ï¼Œæ—¥å‰æŠ•æ ‡ç­–ç•¥
 clear
 clc
 close all
 load data_DA_potential
-Pchmax=[Forecast_CS1(1,:);Forecast_CS2(1,:);Forecast_CS3(1,:);Forecast_CS4(1,:)];%³äµç¹¦ÂÊÉÏÏŞ
-Pdismax=[Forecast_CS1(2,:);Forecast_CS2(2,:);Forecast_CS3(2,:);Forecast_CS4(2,:)];%·Åµç¹¦ÂÊÉÏÏŞ
-Smin=[Forecast_CS1(3,:);Forecast_CS2(3,:);Forecast_CS3(3,:);Forecast_CS4(3,:)];%SOCÏÂÏŞ
-Smax=[Forecast_CS1(4,:);Forecast_CS2(4,:);Forecast_CS3(4,:);Forecast_CS4(4,:)];%SOCÉÏÏŞ
-dS=[Forecast_CS1(5,:);Forecast_CS2(5,:);Forecast_CS3(5,:);Forecast_CS4(5,:)];%SOC±ä»¯
-%³äµçÕ¾Í¶±êÎÊÌâ
-Pch=sdpvar(4,24);%³äµçÕ¾³äµç¹¦ÂÊ
-Pdis=sdpvar(4,24);%³äµçÕ¾·Åµç¹¦ÂÊ
-S=sdpvar(4,24);%³äµçÕ¾¹ãÒå´¢ÄÜSOC
-Ccs=[0<=Pch<=Pchmax,0<=Pdis<=Pdismax,Smin<=S<=Smax,S(:,1)==0.95*Pch(:,1)-Pdis(:,1)/0.95+dS(:,1),S(:,2:24)==S(:,1:23)+0.95*Pch(:,2:24)-Pdis(:,2:24)/0.95+dS(:,2:24)];%Ô¼ÊøÌõ¼ş
-% %ÊĞ³¡³öÇåÎÊÌâ
+Pchmax=[Forecast_CS1(1,:);Forecast_CS2(1,:);Forecast_CS3(1,:);Forecast_CS4(1,:)];%å……ç”µåŠŸç‡ä¸Šé™
+Pdismax=[Forecast_CS1(2,:);Forecast_CS2(2,:);Forecast_CS3(2,:);Forecast_CS4(2,:)];%æ”¾ç”µåŠŸç‡ä¸Šé™
+Smin=[Forecast_CS1(3,:);Forecast_CS2(3,:);Forecast_CS3(3,:);Forecast_CS4(3,:)];%SOCä¸‹é™
+Smax=[Forecast_CS1(4,:);Forecast_CS2(4,:);Forecast_CS3(4,:);Forecast_CS4(4,:)];%SOCä¸Šé™
+dS=[Forecast_CS1(5,:);Forecast_CS2(5,:);Forecast_CS3(5,:);Forecast_CS4(5,:)];%SOCå˜åŒ–
+%å……ç”µç«™æŠ•æ ‡é—®é¢˜
+Pch=sdpvar(4,24);%å……ç”µç«™å……ç”µåŠŸç‡
+Pdis=sdpvar(4,24);%å……ç”µç«™æ”¾ç”µåŠŸç‡
+S=sdpvar(4,24);%å……ç”µç«™å¹¿ä¹‰å‚¨èƒ½SOC
+Ccs=[0<=Pch<=Pchmax,0<=Pdis<=Pdismax,Smin<=S<=Smax,S(:,1)==0.95*Pch(:,1)-Pdis(:,1)/0.95+dS(:,1),S(:,2:24)==S(:,1:23)+0.95*Pch(:,2:24)-Pdis(:,2:24)/0.95+dS(:,2:24)];%çº¦æŸæ¡ä»¶
+% %å¸‚åœºå‡ºæ¸…é—®é¢˜
 Loadcurve=[0.955391944564747,0.978345604157644,1,0.995019488956258,0.972932005197055,0.970333477695972,0.930489389346037,0.890428757037679,0.902771762667822,0.941966219142486,0.911000433087917,0.862061498484192,0.840190558683413,0.831095712429623,0.756604590731919,0.671719359029883,0.611520138588133,0.582936336076224,0.572542226071893,0.574707665656128,0.587267215244695,0.644218276310091,0.755521870939801,0.884798614118666];
-PL_base=[5.704;5.705;5.631;6.518;4.890;5.705;5.847]*1000;%¸ººÉ·Ö²¼
-PL=PL_base*Loadcurve;%»ù´¡¸ººÉ
-Pf=sdpvar(7,24);%À¡Ïß¹¦ÂÊ
-Pf(1,:)=PL(1,:)+Pch(1,:)-Pdis(1,:);Pf(2,:)=PL(2,:);Pf(3,:)=PL(3,:);Pf(4,:)=PL(4,:)+Pch(2,:)-Pdis(2,:);Pf(5,:)=PL(5,:)+Pch(3,:)-Pdis(3,:);Pf(6,:)=PL(6,:);Pf(7,:)=PL(7,:)+Pch(4,:)-Pdis(4,:);%À¡Ïß¹¦ÂÊ×é³É
-Pf_limit=1000*[40,40,40,40,40,40,40]';%À¡Ïß¹¦ÂÊÏŞÖÆ
-Pg=sdpvar(10,24);%·¢µçÉÌ·Ö¶ÎµçÁ¿
-Pg_step=1000*[20,5,3,2,2,2,2,2,2,100]';%±¨¼ÛÇø¼ä
-Price_DSO=[3:12]'*0.1;%·Ö¶Îµç¼Û
-Lagrant_G_left=sdpvar(10,24);%·¢µçÉÌµçÁ¿ÏÂ½ç
-Lagrant_G_right=sdpvar(10,24);%·¢µçÉÌµçÁ¿ÉÏ½ç
-b_Lagrant_G_left=binvar(10,24);%·¢µçÉÌµçÁ¿ÏÂ½ç²¼¶û±äÁ¿
-b_Lagrant_G_right=binvar(10,24);%·¢µçÉÌµçÁ¿ÉÏ½ç²¼¶û±äÁ¿
-Lagrant_L_left=sdpvar(7,24);%ÏßÂ·¹¦ÂÊÏÂ½ç
-Lagrant_L_right=sdpvar(7,24);%ÏßÂ·¹¦ÂÊÉÏ½ç
-b_Lagrant_L_left=binvar(7,24);%ÏßÂ·¹¦ÂÊÉÏ½ç²¼¶û±äÁ¿
-b_Lagrant_L_right=binvar(7,24);%ÏßÂ·¹¦ÂÊÏÂ½ç²¼¶û±äÁ¿
-Lagrant_G=sdpvar(1,24);%Æ½ºâ½Úµãµç¼Û
+PL_base=[5.704;5.705;5.631;6.518;4.890;5.705;5.847]*1000;%è´Ÿè·åˆ†å¸ƒ
+PL=PL_base*Loadcurve;%åŸºç¡€è´Ÿè·
+Pf=sdpvar(7,24);%é¦ˆçº¿åŠŸç‡
+Pf(1,:)=PL(1,:)+Pch(1,:)-Pdis(1,:);Pf(2,:)=PL(2,:);Pf(3,:)=PL(3,:);Pf(4,:)=PL(4,:)+Pch(2,:)-Pdis(2,:);Pf(5,:)=PL(5,:)+Pch(3,:)-Pdis(3,:);Pf(6,:)=PL(6,:);Pf(7,:)=PL(7,:)+Pch(4,:)-Pdis(4,:);%é¦ˆçº¿åŠŸç‡ç»„æˆ
+Pf_limit=1000*[40,40,40,40,40,40,40]';%é¦ˆçº¿åŠŸç‡é™åˆ¶
+Pg=sdpvar(10,24);%å‘ç”µå•†åˆ†æ®µç”µé‡
+Pg_step=1000*[20,5,3,2,2,2,2,2,2,100]';%æŠ¥ä»·åŒºé—´
+Price_DSO=[3:12]'*0.1;%åˆ†æ®µç”µä»·
+Lagrant_G_left=sdpvar(10,24);%å‘ç”µå•†ç”µé‡ä¸‹ç•Œ
+Lagrant_G_right=sdpvar(10,24);%å‘ç”µå•†ç”µé‡ä¸Šç•Œ
+b_Lagrant_G_left=binvar(10,24);%å‘ç”µå•†ç”µé‡ä¸‹ç•Œå¸ƒå°”å˜é‡
+b_Lagrant_G_right=binvar(10,24);%å‘ç”µå•†ç”µé‡ä¸Šç•Œå¸ƒå°”å˜é‡
+Lagrant_L_left=sdpvar(7,24);%çº¿è·¯åŠŸç‡ä¸‹ç•Œ
+Lagrant_L_right=sdpvar(7,24);%çº¿è·¯åŠŸç‡ä¸Šç•Œ
+b_Lagrant_L_left=binvar(7,24);%çº¿è·¯åŠŸç‡ä¸Šç•Œå¸ƒå°”å˜é‡
+b_Lagrant_L_right=binvar(7,24);%çº¿è·¯åŠŸç‡ä¸‹ç•Œå¸ƒå°”å˜é‡
+Lagrant_G=sdpvar(1,24);%å¹³è¡¡èŠ‚ç‚¹ç”µä»·
 DLMP=sdpvar(7,24);%DLMP
 Ckkt=[sum(Pg)==sum(Pf),
     0<=Pg<=Pg_step*ones(1,24),
@@ -494,10 +494,10 @@ Ckkt=[sum(Pg)==sum(Pf),
     Pg_step*ones(1,24)-Pg<=1E6*b_Lagrant_G_right,0<=Lagrant_G_right<=(1-b_Lagrant_G_right),
     -Pf_limit*ones(1,24)<=Pf<=Pf_limit*ones(1,24),
     Pf+Pf_limit*ones(1,24)<=1E6*b_Lagrant_L_left,0<=Lagrant_L_left<=(1-b_Lagrant_L_left),
-    -Pf+Pf_limit*ones(1,24)<=1E6*b_Lagrant_L_right,0<=Lagrant_L_right<=(1-b_Lagrant_L_right)];%ÊĞ³¡³öÇåÎÊÌâµÄKKTÌõ¼ş
+    -Pf+Pf_limit*ones(1,24)<=1E6*b_Lagrant_L_right,0<=Lagrant_L_right<=(1-b_Lagrant_L_right)];%å¸‚åœºå‡ºæ¸…é—®é¢˜çš„KKTæ¡ä»¶
 Obj=sum(sum((Price_DSO*ones(1,24)).*Pg))-sum(sum(DLMP.*PL))+sum(sum((Pg_step*ones(1,24)).*Lagrant_G_right))+sum(sum((Lagrant_L_left+Lagrant_L_right).*(Pf_limit*ones(1,24))));
-%Çó½âÎÊÌâ
-C=[Ccs,Ckkt];%Ô¼ÊøÌõ¼ş
+%æ±‚è§£é—®é¢˜
+C=[Ccs,Ckkt];%çº¦æŸæ¡ä»¶
 ops=sdpsettings('solver','gurobi');
 result=solvesdp(C,Obj,ops);
 DLMP=double(DLMP);
@@ -507,46 +507,46 @@ Pch=double(Pch);
 Pdis=double(Pdis);
 Pg=double(Pg);
 S=double(S);
-figure(1)%½Úµã±ß¼Êµç¼Û
+figure(1)%èŠ‚ç‚¹è¾¹é™…ç”µä»·
 stairs(mean(DLMP));
-xlabel Ê±¼ä
-ylabel µç¼Û(Ôª/kWh)
+xlabel æ—¶é—´
+ylabel ç”µä»·(å…ƒ/kWh)
 ylim([0.3,1.3])
-figure(2)%¸ººÉÇúÏß
+figure(2)%è´Ÿè·æ›²çº¿
 plot(sum(PL),'b--');
 hold on
 plot(sum(Pg),'r.-')
-xlabel Ê±¼ä
-ylabel ¸ººÉ(MW)
-legend('»ù´¡¸ººÉ','ÓĞĞò³äµç¸ººÉ')
-figure(3)%ÅäµçÍø¹ãÒå´¢ÄÜ³ä·Åµç¹¦ÂÊ
+xlabel æ—¶é—´
+ylabel è´Ÿè·(MW)
+legend('åŸºç¡€è´Ÿè·','æœ‰åºå……ç”µè´Ÿè·')
+figure(3)%é…ç”µç½‘å¹¿ä¹‰å‚¨èƒ½å……æ”¾ç”µåŠŸç‡
 plot(sum(Pchmax));
 hold on
 plot(-sum(Pdismax),'g');
 plot(sum(Pch-Pdis),'r.-')
-xlabel Ê±¼ä
-ylabel ¹¦ÂÊ(kW)
-legend('ÈÕÇ°³äµç¹¦ÂÊÉÏ½ç','ÈÕÇ°·Åµç¹¦ÂÊÉÏ½ç','ÓĞĞò³ä·Åµç¹¦ÂÊ')
-figure(4)%ÅäµçÍø¹ãÒå´¢ÄÜSOC±ä»¯
+xlabel æ—¶é—´
+ylabel åŠŸç‡(kW)
+legend('æ—¥å‰å……ç”µåŠŸç‡ä¸Šç•Œ','æ—¥å‰æ”¾ç”µåŠŸç‡ä¸Šç•Œ','æœ‰åºå……æ”¾ç”µåŠŸç‡')
+figure(4)%é…ç”µç½‘å¹¿ä¹‰å‚¨èƒ½SOCå˜åŒ–
 plot(sum(Smin),'g');
 hold on
 plot(sum(Smax));
 plot(sum(S),'r.-');
-xlabel Ê±¼ä
-ylabel ÈİÁ¿(kWh)
-legend('SOCÉÏ½ç','SOCÏÂ½ç','ÓĞĞò³ä·ÅµçSOC')
-Cost=sum(sum((Pf-PL).*DLMP));%×ÜÓÃµç·ÑÓÃ
-Cost_b=sum(sum(((Pf-PL)>0).*(Pf-PL).*DLMP));%×Ü¹ºµç·ÑÓÃ
-Cost_s=-sum(sum(((Pf-PL)<0).*(Pf-PL).*DLMP));%×ÜÊÛµçÊÕÈë
-result_order.Pdis=Pdis;result_order.Pch=Pch;result_order.Cost_b=Cost_b;result_order.Cost_s=Cost_s;result_order.Cost=Cost;result_order.DLMP=DLMP;result_order.Pf=Pf;result_order.Pg=Pg;%½á¹û±£´æ
+xlabel æ—¶é—´
+ylabel å®¹é‡(kWh)
+legend('SOCä¸Šç•Œ','SOCä¸‹ç•Œ','æœ‰åºå……æ”¾ç”µSOC')
+Cost=sum(sum((Pf-PL).*DLMP));%æ€»ç”¨ç”µè´¹ç”¨
+Cost_b=sum(sum(((Pf-PL)>0).*(Pf-PL).*DLMP));%æ€»è´­ç”µè´¹ç”¨
+Cost_s=-sum(sum(((Pf-PL)<0).*(Pf-PL).*DLMP));%æ€»å”®ç”µæ”¶å…¥
+result_order.Pdis=Pdis;result_order.Pch=Pch;result_order.Cost_b=Cost_b;result_order.Cost_s=Cost_s;result_order.Cost=Cost;result_order.DLMP=DLMP;result_order.Pf=Pf;result_order.Pg=Pg;%ç»“æœä¿å­˜
 save('result_order','result_order');
-%% µÚËÄ½Ú£¬ÊµÊ±Í¶±ê²ßÂÔ
+%% ç¬¬å››èŠ‚ï¼Œå®æ—¶æŠ•æ ‡ç­–ç•¥
 clear
 clc
 close all
 load data_RT_potential
 load result_order
-Pch1=RT_CS1(96).Pch;Pdis1=RT_CS1(96).Pdis;Smin1=RT_CS1(96).Smin;Smax1=RT_CS1(96).Smax;dS1=RT_CS1(96).dS;%È¡×îºóÒ»¸öÊ±¿ÌµÄ¿Éµ÷¶ÈÇ±Á¦
+Pch1=RT_CS1(96).Pch;Pdis1=RT_CS1(96).Pdis;Smin1=RT_CS1(96).Smin;Smax1=RT_CS1(96).Smax;dS1=RT_CS1(96).dS;%å–æœ€åä¸€ä¸ªæ—¶åˆ»çš„å¯è°ƒåº¦æ½œåŠ›
 Pch2=RT_CS2(96).Pch;Pdis2=RT_CS2(96).Pdis;Smin2=RT_CS2(96).Smin;Smax2=RT_CS2(96).Smax;dS2=RT_CS2(96).dS;
 Pch3=RT_CS3(96).Pch;Pdis3=RT_CS3(96).Pdis;Smin3=RT_CS3(96).Smin;Smax3=RT_CS3(96).Smax;dS3=RT_CS3(96).dS;
 Pch4=RT_CS4(96).Pch;Pdis4=RT_CS4(96).Pdis;Smin4=RT_CS4(96).Smin;Smax4=RT_CS4(96).Smax;dS4=RT_CS4(96).dS;
@@ -555,38 +555,38 @@ Pdismax=[Pdis1;Pdis2;Pdis3;Pdis4];
 Smin=[Smin1;Smin2;Smin3;Smin4];
 Smax=[Smax1;Smax2;Smax3;Smax4];
 dS=[dS1;dS2;dS3;dS4];
-Link=zeros(24,96);%Ê±¶Î»»Ëã¾ØÕó(ÈÕÇ°1h»»ËãÎªÊµÊ±15min)
+Link=zeros(24,96);%æ—¶æ®µæ¢ç®—çŸ©é˜µ(æ—¥å‰1hæ¢ç®—ä¸ºå®æ—¶15min)
 for i=1:24
     Link(i,4*i-3:4*i)=1;
 end
-DA_Ps=result_order.Pch-result_order.Pdis;%ÈÕÇ°µ÷¶ÈÊı¾İ
-DA_Ps=DA_Ps*Link;%Ê±¶Î»»Ëã
-DA_Pf=result_order.Pf*Link;%ÈÕÇ°×Ü¹¦ÂÊ
-%³äµçÕ¾Í¶±êÎÊÌâ
-Pch=sdpvar(4,96);%³äµçÕ¾³äµç¹¦ÂÊ
-Pdis=sdpvar(4,96);%³äµçÕ¾·Åµç¹¦ÂÊ
-S=sdpvar(4,96);%³äµçÕ¾¹ãÒå´¢ÄÜSOC
-Ccs=[0<=Pch<=Pchmax,0<=Pdis<=Pdismax,Smin<=S<=Smax,S(:,1)==0.95*0.25*Pch(:,1)-0.25*Pdis(:,1)/0.95+dS(:,1),S(:,2:96)==S(:,1:95)+0.25*0.95*Pch(:,2:96)-0.25*Pdis(:,2:96)/0.95+dS(:,2:96)];%Ô¼ÊøÌõ¼ş
-% %ÊĞ³¡³öÇåÎÊÌâ
+DA_Ps=result_order.Pch-result_order.Pdis;%æ—¥å‰è°ƒåº¦æ•°æ®
+DA_Ps=DA_Ps*Link;%æ—¶æ®µæ¢ç®—
+DA_Pf=result_order.Pf*Link;%æ—¥å‰æ€»åŠŸç‡
+%å……ç”µç«™æŠ•æ ‡é—®é¢˜
+Pch=sdpvar(4,96);%å……ç”µç«™å……ç”µåŠŸç‡
+Pdis=sdpvar(4,96);%å……ç”µç«™æ”¾ç”µåŠŸç‡
+S=sdpvar(4,96);%å……ç”µç«™å¹¿ä¹‰å‚¨èƒ½SOC
+Ccs=[0<=Pch<=Pchmax,0<=Pdis<=Pdismax,Smin<=S<=Smax,S(:,1)==0.95*0.25*Pch(:,1)-0.25*Pdis(:,1)/0.95+dS(:,1),S(:,2:96)==S(:,1:95)+0.25*0.95*Pch(:,2:96)-0.25*Pdis(:,2:96)/0.95+dS(:,2:96)];%çº¦æŸæ¡ä»¶
+% %å¸‚åœºå‡ºæ¸…é—®é¢˜
 Loadcurve=[0.955391944564747,0.978345604157644,1,0.995019488956258,0.972932005197055,0.970333477695972,0.930489389346037,0.890428757037679,0.902771762667822,0.941966219142486,0.911000433087917,0.862061498484192,0.840190558683413,0.831095712429623,0.756604590731919,0.671719359029883,0.611520138588133,0.582936336076224,0.572542226071893,0.574707665656128,0.587267215244695,0.644218276310091,0.755521870939801,0.884798614118666];
-Loadcurve=Loadcurve*Link;%»»³É96¸öÊ±¶Î
-PL_base=[5.704;5.705;5.631;6.518;4.890;5.705;5.847]*1000;%¸ººÉ·Ö²¼
-PL=PL_base*Loadcurve;%»ù´¡¸ººÉ
-Pf=sdpvar(7,96);%À¡Ïß¹¦ÂÊ
-Pf(1,:)=PL(1,:)+Pch(1,:)-Pdis(1,:);Pf(2,:)=PL(2,:);Pf(3,:)=PL(3,:);Pf(4,:)=PL(4,:)+Pch(2,:)-Pdis(2,:);Pf(5,:)=PL(5,:)+Pch(3,:)-Pdis(3,:);Pf(6,:)=PL(6,:);Pf(7,:)=PL(7,:)+Pch(4,:)-Pdis(4,:);%À¡Ïß¹¦ÂÊ×é³É
-Pf_limit=1000*[40,40,40,40,40,40,40]';%À¡Ïß¹¦ÂÊÏŞÖÆ
-Pg=sdpvar(10,96);%·¢µçÉÌ·Ö¶ÎµçÁ¿
-Pg_step=1000*[20,5,3,2,2,2,2,2,2,100]';%±¨¼ÛÇø¼ä
-Price_DSO=[3:12]'*0.1;%·Ö¶Îµç¼Û
-Lagrant_G_left=sdpvar(10,96);%·¢µçÉÌµçÁ¿ÏÂ½ç
-Lagrant_G_right=sdpvar(10,96);%·¢µçÉÌµçÁ¿ÉÏ½ç
-b_Lagrant_G_left=binvar(10,96);%·¢µçÉÌµçÁ¿ÏÂ½ç²¼¶û±äÁ¿
-b_Lagrant_G_right=binvar(10,96);%·¢µçÉÌµçÁ¿ÉÏ½ç²¼¶û±äÁ¿
-Lagrant_L_left=sdpvar(7,96);%ÏßÂ·¹¦ÂÊÏÂ½ç
-Lagrant_L_right=sdpvar(7,96);%ÏßÂ·¹¦ÂÊÉÏ½ç
-b_Lagrant_L_left=binvar(7,96);%ÏßÂ·¹¦ÂÊÉÏ½ç²¼¶û±äÁ¿
-b_Lagrant_L_right=binvar(7,96);%ÏßÂ·¹¦ÂÊÏÂ½ç²¼¶û±äÁ¿
-Lagrant_G=sdpvar(1,96);%Æ½ºâ½Úµãµç¼Û
+Loadcurve=Loadcurve*Link;%æ¢æˆ96ä¸ªæ—¶æ®µ
+PL_base=[5.704;5.705;5.631;6.518;4.890;5.705;5.847]*1000;%è´Ÿè·åˆ†å¸ƒ
+PL=PL_base*Loadcurve;%åŸºç¡€è´Ÿè·
+Pf=sdpvar(7,96);%é¦ˆçº¿åŠŸç‡
+Pf(1,:)=PL(1,:)+Pch(1,:)-Pdis(1,:);Pf(2,:)=PL(2,:);Pf(3,:)=PL(3,:);Pf(4,:)=PL(4,:)+Pch(2,:)-Pdis(2,:);Pf(5,:)=PL(5,:)+Pch(3,:)-Pdis(3,:);Pf(6,:)=PL(6,:);Pf(7,:)=PL(7,:)+Pch(4,:)-Pdis(4,:);%é¦ˆçº¿åŠŸç‡ç»„æˆ
+Pf_limit=1000*[40,40,40,40,40,40,40]';%é¦ˆçº¿åŠŸç‡é™åˆ¶
+Pg=sdpvar(10,96);%å‘ç”µå•†åˆ†æ®µç”µé‡
+Pg_step=1000*[20,5,3,2,2,2,2,2,2,100]';%æŠ¥ä»·åŒºé—´
+Price_DSO=[3:12]'*0.1;%åˆ†æ®µç”µä»·
+Lagrant_G_left=sdpvar(10,96);%å‘ç”µå•†ç”µé‡ä¸‹ç•Œ
+Lagrant_G_right=sdpvar(10,96);%å‘ç”µå•†ç”µé‡ä¸Šç•Œ
+b_Lagrant_G_left=binvar(10,96);%å‘ç”µå•†ç”µé‡ä¸‹ç•Œå¸ƒå°”å˜é‡
+b_Lagrant_G_right=binvar(10,96);%å‘ç”µå•†ç”µé‡ä¸Šç•Œå¸ƒå°”å˜é‡
+Lagrant_L_left=sdpvar(7,96);%çº¿è·¯åŠŸç‡ä¸‹ç•Œ
+Lagrant_L_right=sdpvar(7,96);%çº¿è·¯åŠŸç‡ä¸Šç•Œ
+b_Lagrant_L_left=binvar(7,96);%çº¿è·¯åŠŸç‡ä¸Šç•Œå¸ƒå°”å˜é‡
+b_Lagrant_L_right=binvar(7,96);%çº¿è·¯åŠŸç‡ä¸‹ç•Œå¸ƒå°”å˜é‡
+Lagrant_G=sdpvar(1,96);%å¹³è¡¡èŠ‚ç‚¹ç”µä»·
 DLMP=sdpvar(7,96);%DLMP
 Ckkt=[sum(Pg)==sum(Pf),
     0<=Pg<=Pg_step*ones(1,96),
@@ -596,10 +596,10 @@ Ckkt=[sum(Pg)==sum(Pf),
     Pg_step*ones(1,96)-Pg<=1E6*b_Lagrant_G_right,0<=Lagrant_G_right<=(1-b_Lagrant_G_right),
     -Pf_limit*ones(1,96)<=Pf<=Pf_limit*ones(1,96),
     Pf+Pf_limit*ones(1,96)<=1E6*b_Lagrant_L_left,0<=Lagrant_L_left<=(1-b_Lagrant_L_left),
-    -Pf+Pf_limit*ones(1,96)<=1E6*b_Lagrant_L_right,0<=Lagrant_L_right<=(1-b_Lagrant_L_right)];%ÊĞ³¡³öÇåÎÊÌâµÄKKTÌõ¼ş
+    -Pf+Pf_limit*ones(1,96)<=1E6*b_Lagrant_L_right,0<=Lagrant_L_right<=(1-b_Lagrant_L_right)];%å¸‚åœºå‡ºæ¸…é—®é¢˜çš„KKTæ¡ä»¶
 Obj=0.25*sum(sum((Price_DSO*ones(1,96)).*Pg))-sum(sum(DLMP.*PL))+sum(sum((Pg_step*ones(1,96)).*Lagrant_G_right))+sum(sum((Lagrant_L_left+Lagrant_L_right).*(Pf_limit*ones(1,96))))+0.1*0.25*sum(sum(abs(Pch-Pdis-DA_Ps)));
-%Çó½âÎÊÌâ
-C=[Ccs,Ckkt];%Ô¼ÊøÌõ¼ş
+%æ±‚è§£é—®é¢˜
+C=[Ccs,Ckkt];%çº¦æŸæ¡ä»¶
 result=solvesdp(C,Obj);
 DLMP=double(DLMP);
 Lagrant_G=double(Lagrant_G);
@@ -609,40 +609,40 @@ Pdis=double(Pdis);
 Pg=double(Pg);
 S=double(S);
 double(Obj)
-figure(1)%ÊµÊ±ÈÕÇ°½á¹û¶Ô±È
+figure(1)%å®æ—¶æ—¥å‰ç»“æœå¯¹æ¯”
 hold on
 plot(sum(Pf),'r.-')
 plot(sum(DA_Pf),'b--');
-Cost=sum(sum((Pf-PL).*DLMP));%×ÜÓÃµç·ÑÓÃ
-Cost_b=sum(sum(((Pf-PL)>0).*(Pf-PL).*DLMP))%×Ü¹ºµç·ÑÓÃ
-Cost_s=-sum(sum(((Pf-PL)<0).*(Pf-PL).*DLMP))%×ÜÊÛµçÊÕÈë
-Cost_r=0.1*0.25*sum(sum(abs(Pch-Pdis-DA_Ps)))%Æ½ºâ·ÑÓÃ
-MAPE=100*sum(abs((sum(DA_Pf)-sum(Pf))./sum(DA_Pf))/96);%Æ½¾ù°Ù·ÖÎó²î
-result_order_RT.Pdis=Pdis;result_order_RT.Pch=Pch;result_order_RT.Cost_b=Cost_b;result_order_RT.Cost_s=Cost_s;result_order_RT.Cost=Cost;result_order_RT.DLMP=DLMP;result_order_RT.Pf=Pf;result_order_RT.Pg=Pg;%½á¹û±£´æ
+Cost=sum(sum((Pf-PL).*DLMP));%æ€»ç”¨ç”µè´¹ç”¨
+Cost_b=sum(sum(((Pf-PL)>0).*(Pf-PL).*DLMP))%æ€»è´­ç”µè´¹ç”¨
+Cost_s=-sum(sum(((Pf-PL)<0).*(Pf-PL).*DLMP))%æ€»å”®ç”µæ”¶å…¥
+Cost_r=0.1*0.25*sum(sum(abs(Pch-Pdis-DA_Ps)))%å¹³è¡¡è´¹ç”¨
+MAPE=100*sum(abs((sum(DA_Pf)-sum(Pf))./sum(DA_Pf))/96);%å¹³å‡ç™¾åˆ†è¯¯å·®
+result_order_RT.Pdis=Pdis;result_order_RT.Pch=Pch;result_order_RT.Cost_b=Cost_b;result_order_RT.Cost_s=Cost_s;result_order_RT.Cost=Cost;result_order_RT.DLMP=DLMP;result_order_RT.Pf=Pf;result_order_RT.Pg=Pg;%ç»“æœä¿å­˜
 save('result_order_RT','result_order_RT');
-%% µÚÎå½Ú£¬ÊµÊ±³ä·Åµç¹¦ÂÊ·ÖÅä
+%% ç¬¬äº”èŠ‚ï¼Œå®æ—¶å……æ”¾ç”µåŠŸç‡åˆ†é…
 clear
 clc
 close all
 load result_order_RT
 load data_RT_potential
-%³äµçÕ¾1
-[m,n]=size(RT_CS1(1).EV);%³µµÄÊıÁ¿
+%å……ç”µç«™1
+[m,n]=size(RT_CS1(1).EV);%è½¦çš„æ•°é‡
 X_CS1=zeros(m,96);
 for i=1:m
-    X_CS1(i,RT_CS1(1).EV(i,1):RT_CS1(1).EV(i,2))=1;%Í£²´×´Ì¬¾ØÕó
+    X_CS1(i,RT_CS1(1).EV(i,1):RT_CS1(1).EV(i,2))=1;%åœæ³ŠçŠ¶æ€çŸ©é˜µ
 end
-pch_CS1=sdpvar(m,96);%³äµç
-pdis_CS1=sdpvar(m,96);%·Åµç
+pch_CS1=sdpvar(m,96);%å……ç”µ
+pdis_CS1=sdpvar(m,96);%æ”¾ç”µ
 s_CS1=sdpvar(m,96);%SOC
 C_CS1=[0<=pch_CS1<=6.6*X_CS1,
     0<=pdis_CS1<=6.6*X_CS1,
     32*0.15<=s_CS1<=32*0.9,
     s_CS1(:,1)==RT_CS1(1).EV(:,3)+0.95*0.25*pch_CS1(:,1)-0.25*pdis_CS1(:,1)/0.95,
     s_CS1(:,2:96)==s_CS1(:,1:95)+0.95*0.25*pch_CS1(:,2:96)-0.25*pdis_CS1(:,2:96)/0.95,
-    0.25*sum(0.95*pch_CS1-pdis_CS1/0.95,2)==32*0.9-RT_CS1(1).EV(:,3)];%Ô¼ÊøÌõ¼ş
-a_CS1=sdpvar(1,96);%¸¨Öú±äÁ¿£¬±ÜÃâÄÚ´æ²»×ã
-b_CS1=sdpvar(1,96);%¸¨Öú±äÁ¿£¬±ÜÃâÄÚ´æ²»×ã
+    0.25*sum(0.95*pch_CS1-pdis_CS1/0.95,2)==32*0.9-RT_CS1(1).EV(:,3)];%çº¦æŸæ¡ä»¶
+a_CS1=sdpvar(1,96);%è¾…åŠ©å˜é‡ï¼Œé¿å…å†…å­˜ä¸è¶³
+b_CS1=sdpvar(1,96);%è¾…åŠ©å˜é‡ï¼Œé¿å…å†…å­˜ä¸è¶³
 C_CS1=[C_CS1,a_CS1==sum(pch_CS1)-result_order_RT.Pch(1,:)];
 C_CS1=[C_CS1,b_CS1==sum(pdis_CS1)-result_order_RT.Pdis(1,:)];
 f_CS1=sum(a_CS1.^2+b_CS1.^2);
@@ -650,23 +650,23 @@ f_CS1=sum(abs(a_CS1)+abs(b_CS1));
 solvesdp(C_CS1,f_CS1);
 pch_CS1=double(pch_CS1);
 pdis_CS1=double(pdis_CS1);
-%³äµçÕ¾2
-[m,n]=size(RT_CS2(1).EV);%³µµÄÊıÁ¿
+%å……ç”µç«™2
+[m,n]=size(RT_CS2(1).EV);%è½¦çš„æ•°é‡
 X_CS2=zeros(m,96);
 for i=1:m
-    X_CS2(i,RT_CS2(1).EV(i,1):RT_CS2(1).EV(i,2))=1;%Í£²´×´Ì¬¾ØÕó
+    X_CS2(i,RT_CS2(1).EV(i,1):RT_CS2(1).EV(i,2))=1;%åœæ³ŠçŠ¶æ€çŸ©é˜µ
 end
-pch_CS2=sdpvar(m,96);%³äµç
-pdis_CS2=sdpvar(m,96);%·Åµç
+pch_CS2=sdpvar(m,96);%å……ç”µ
+pdis_CS2=sdpvar(m,96);%æ”¾ç”µ
 s_CS2=sdpvar(m,96);%SOC
 C_CS2=[0<=pch_CS2<=6.6*X_CS2,
     0<=pdis_CS2<=6.6*X_CS2,
     32*0.15<=s_CS2<=32*0.9,
     s_CS2(:,1)==RT_CS2(1).EV(:,3)+0.95*0.25*pch_CS2(:,1)-0.25*pdis_CS2(:,1)/0.95,
     s_CS2(:,2:96)==s_CS2(:,1:95)+0.95*0.25*pch_CS2(:,2:96)-0.25*pdis_CS2(:,2:96)/0.95,
-    0.25*sum(0.95*pch_CS2-pdis_CS2/0.95,2)==32*0.9-RT_CS2(1).EV(:,3)];%Ô¼ÊøÌõ¼ş
-a_CS2=sdpvar(1,96);%¸¨Öú±äÁ¿£¬±ÜÃâÄÚ´æ²»×ã
-b_CS2=sdpvar(1,96);%¸¨Öú±äÁ¿£¬±ÜÃâÄÚ´æ²»×ã
+    0.25*sum(0.95*pch_CS2-pdis_CS2/0.95,2)==32*0.9-RT_CS2(1).EV(:,3)];%çº¦æŸæ¡ä»¶
+a_CS2=sdpvar(1,96);%è¾…åŠ©å˜é‡ï¼Œé¿å…å†…å­˜ä¸è¶³
+b_CS2=sdpvar(1,96);%è¾…åŠ©å˜é‡ï¼Œé¿å…å†…å­˜ä¸è¶³
 C_CS2=[C_CS2,a_CS2==sum(pch_CS2)-result_order_RT.Pch(2,:)];
 C_CS2=[C_CS2,b_CS2==sum(pdis_CS2)-result_order_RT.Pdis(2,:)];
 f_CS2=sum(a_CS2.^2+b_CS2.^2);
@@ -674,23 +674,23 @@ f_CS2=sum(abs(a_CS2)+abs(b_CS2));
 solvesdp(C_CS2,f_CS2);
 pch_CS2=double(pch_CS2);
 pdis_CS2=double(pdis_CS2);
-%³äµçÕ¾3
-[m,n]=size(RT_CS3(1).EV);%³µµÄÊıÁ¿
+%å……ç”µç«™3
+[m,n]=size(RT_CS3(1).EV);%è½¦çš„æ•°é‡
 X_CS3=zeros(m,96);
 for i=1:m
-    X_CS3(i,RT_CS3(1).EV(i,1):RT_CS3(1).EV(i,2))=1;%Í£²´×´Ì¬¾ØÕó
+    X_CS3(i,RT_CS3(1).EV(i,1):RT_CS3(1).EV(i,2))=1;%åœæ³ŠçŠ¶æ€çŸ©é˜µ
 end
-pch_CS3=sdpvar(m,96);%³äµç
-pdis_CS3=sdpvar(m,96);%·Åµç
+pch_CS3=sdpvar(m,96);%å……ç”µ
+pdis_CS3=sdpvar(m,96);%æ”¾ç”µ
 s_CS3=sdpvar(m,96);%SOC
 C_CS3=[0<=pch_CS3<=6.6*X_CS3,
     0<=pdis_CS3<=6.6*X_CS3,
     32*0.15<=s_CS3<=32*0.9,
     s_CS3(:,1)==RT_CS3(1).EV(:,3)+0.95*0.25*pch_CS3(:,1)-0.25*pdis_CS3(:,1)/0.95,
     s_CS3(:,2:96)==s_CS3(:,1:95)+0.95*0.25*pch_CS3(:,2:96)-0.25*pdis_CS3(:,2:96)/0.95,
-    0.25*sum(0.95*pch_CS3-pdis_CS3/0.95,2)==32*0.9-RT_CS3(1).EV(:,3)];%Ô¼ÊøÌõ¼ş
-a_CS3=sdpvar(1,96);%¸¨Öú±äÁ¿£¬±ÜÃâÄÚ´æ²»×ã
-b_CS3=sdpvar(1,96);%¸¨Öú±äÁ¿£¬±ÜÃâÄÚ´æ²»×ã
+    0.25*sum(0.95*pch_CS3-pdis_CS3/0.95,2)==32*0.9-RT_CS3(1).EV(:,3)];%çº¦æŸæ¡ä»¶
+a_CS3=sdpvar(1,96);%è¾…åŠ©å˜é‡ï¼Œé¿å…å†…å­˜ä¸è¶³
+b_CS3=sdpvar(1,96);%è¾…åŠ©å˜é‡ï¼Œé¿å…å†…å­˜ä¸è¶³
 C_CS3=[C_CS3,a_CS3==sum(pch_CS3)-result_order_RT.Pch(3,:)];
 C_CS3=[C_CS3,b_CS3==sum(pdis_CS3)-result_order_RT.Pdis(3,:)];
 f_CS3=sum(a_CS3.^2+b_CS3.^2);
@@ -698,23 +698,23 @@ f_CS3=sum(abs(a_CS3)+abs(b_CS3));
 solvesdp(C_CS3,f_CS3);
 pch_CS3=double(pch_CS3);
 pdis_CS3=double(pdis_CS3);
-%³äµçÕ¾4
-[m,n]=size(RT_CS4(1).EV);%³µµÄÊıÁ¿
+%å……ç”µç«™4
+[m,n]=size(RT_CS4(1).EV);%è½¦çš„æ•°é‡
 X_CS4=zeros(m,96);
 for i=1:m
-    X_CS4(i,RT_CS4(1).EV(i,1):RT_CS4(1).EV(i,2))=1;%Í£²´×´Ì¬¾ØÕó
+    X_CS4(i,RT_CS4(1).EV(i,1):RT_CS4(1).EV(i,2))=1;%åœæ³ŠçŠ¶æ€çŸ©é˜µ
 end
-pch_CS4=sdpvar(m,96);%³äµç
-pdis_CS4=sdpvar(m,96);%·Åµç
+pch_CS4=sdpvar(m,96);%å……ç”µ
+pdis_CS4=sdpvar(m,96);%æ”¾ç”µ
 s_CS4=sdpvar(m,96);%SOC
 C_CS4=[0<=pch_CS4<=6.6*X_CS4,
     0<=pdis_CS4<=6.6*X_CS4,
     32*0.15<=s_CS4<=32*0.9,
     s_CS4(:,1)==RT_CS4(1).EV(:,3)+0.95*0.25*pch_CS4(:,1)-0.25*pdis_CS4(:,1)/0.95,
     s_CS4(:,2:96)==s_CS4(:,1:95)+0.95*0.25*pch_CS4(:,2:96)-0.25*pdis_CS4(:,2:96)/0.95,
-    0.25*sum(0.95*pch_CS4-pdis_CS4/0.95,2)==32*0.9-RT_CS4(1).EV(:,3)];%Ô¼ÊøÌõ¼ş
-a_CS4=sdpvar(1,96);%¸¨Öú±äÁ¿£¬±ÜÃâÄÚ´æ²»×ã
-b_CS4=sdpvar(1,96);%¸¨Öú±äÁ¿£¬±ÜÃâÄÚ´æ²»×ã
+    0.25*sum(0.95*pch_CS4-pdis_CS4/0.95,2)==32*0.9-RT_CS4(1).EV(:,3)];%çº¦æŸæ¡ä»¶
+a_CS4=sdpvar(1,96);%è¾…åŠ©å˜é‡ï¼Œé¿å…å†…å­˜ä¸è¶³
+b_CS4=sdpvar(1,96);%è¾…åŠ©å˜é‡ï¼Œé¿å…å†…å­˜ä¸è¶³
 C_CS4=[C_CS4,a_CS4==sum(pch_CS4)-result_order_RT.Pch(4,:)];
 C_CS4=[C_CS4,b_CS4==sum(pdis_CS4)-result_order_RT.Pdis(4,:)];
 f_CS4=sum(a_CS4.^2+b_CS4.^2);
@@ -722,44 +722,44 @@ f_CS4=sum(abs(a_CS4)+abs(b_CS4));
 solvesdp(C_CS4,f_CS4);
 pch_CS4=double(pch_CS4);
 pdis_CS4=double(pdis_CS4);
-%% µÚÁù½Ú£¬²ÎÊıÁéÃô¶È·ÖÎö£¨·Åµç²¹³¥ÏµÊı£©
+%% ç¬¬å…­èŠ‚ï¼Œå‚æ•°çµæ•åº¦åˆ†æï¼ˆæ”¾ç”µè¡¥å¿ç³»æ•°ï¼‰
 clear
 clc
 close all
-%·Åµç²¹³¥ÏµÊı
+%æ”¾ç”µè¡¥å¿ç³»æ•°
 load data_DA_potential
-Pchmax=[Forecast_CS1(1,:);Forecast_CS2(1,:);Forecast_CS3(1,:);Forecast_CS4(1,:)];%³äµç¹¦ÂÊÉÏÏŞ
-Pdismax=[Forecast_CS1(2,:);Forecast_CS2(2,:);Forecast_CS3(2,:);Forecast_CS4(2,:)];%·Åµç¹¦ÂÊÉÏÏŞ
-Smin=[Forecast_CS1(3,:);Forecast_CS2(3,:);Forecast_CS3(3,:);Forecast_CS4(3,:)];%SOCÏÂÏŞ
-Smax=[Forecast_CS1(4,:);Forecast_CS2(4,:);Forecast_CS3(4,:);Forecast_CS4(4,:)];%SOCÉÏÏŞ
-dS=[Forecast_CS1(5,:);Forecast_CS2(5,:);Forecast_CS3(5,:);Forecast_CS4(5,:)];%SOC±ä»¯
-for i=1:51%³¢ÊÔ²»Í¬·Åµç²¹³¥ÏµÊı
-    co_dis=1+(i-1)*0.1;%·Åµç²¹³¥ÏµÊı
+Pchmax=[Forecast_CS1(1,:);Forecast_CS2(1,:);Forecast_CS3(1,:);Forecast_CS4(1,:)];%å……ç”µåŠŸç‡ä¸Šé™
+Pdismax=[Forecast_CS1(2,:);Forecast_CS2(2,:);Forecast_CS3(2,:);Forecast_CS4(2,:)];%æ”¾ç”µåŠŸç‡ä¸Šé™
+Smin=[Forecast_CS1(3,:);Forecast_CS2(3,:);Forecast_CS3(3,:);Forecast_CS4(3,:)];%SOCä¸‹é™
+Smax=[Forecast_CS1(4,:);Forecast_CS2(4,:);Forecast_CS3(4,:);Forecast_CS4(4,:)];%SOCä¸Šé™
+dS=[Forecast_CS1(5,:);Forecast_CS2(5,:);Forecast_CS3(5,:);Forecast_CS4(5,:)];%SOCå˜åŒ–
+for i=1:51%å°è¯•ä¸åŒæ”¾ç”µè¡¥å¿ç³»æ•°
+    co_dis=1+(i-1)*0.1;%æ”¾ç”µè¡¥å¿ç³»æ•°
     data_dis(i)=co_dis;
-    %³äµçÕ¾Í¶±êÎÊÌâ
-    Pch=sdpvar(4,24);%³äµçÕ¾³äµç¹¦ÂÊ
-    Pdis=sdpvar(4,24);%³äµçÕ¾·Åµç¹¦ÂÊ
-    S=sdpvar(4,24);%³äµçÕ¾¹ãÒå´¢ÄÜSOC
-    Ccs=[0<=Pch<=Pchmax,0<=Pdis<=Pdismax,Smin<=S<=Smax,S(:,1)==0.95*Pch(:,1)-Pdis(:,1)/(0.95/co_dis)+dS(:,1),S(:,2:24)==S(:,1:23)+0.95*Pch(:,2:24)-Pdis(:,2:24)/(0.95/co_dis)+dS(:,2:24)];%Ô¼ÊøÌõ¼ş
-    % %ÊĞ³¡³öÇåÎÊÌâ
+    %å……ç”µç«™æŠ•æ ‡é—®é¢˜
+    Pch=sdpvar(4,24);%å……ç”µç«™å……ç”µåŠŸç‡
+    Pdis=sdpvar(4,24);%å……ç”µç«™æ”¾ç”µåŠŸç‡
+    S=sdpvar(4,24);%å……ç”µç«™å¹¿ä¹‰å‚¨èƒ½SOC
+    Ccs=[0<=Pch<=Pchmax,0<=Pdis<=Pdismax,Smin<=S<=Smax,S(:,1)==0.95*Pch(:,1)-Pdis(:,1)/(0.95/co_dis)+dS(:,1),S(:,2:24)==S(:,1:23)+0.95*Pch(:,2:24)-Pdis(:,2:24)/(0.95/co_dis)+dS(:,2:24)];%çº¦æŸæ¡ä»¶
+    % %å¸‚åœºå‡ºæ¸…é—®é¢˜
     Loadcurve=[0.955391944564747,0.978345604157644,1,0.995019488956258,0.972932005197055,0.970333477695972,0.930489389346037,0.890428757037679,0.902771762667822,0.941966219142486,0.911000433087917,0.862061498484192,0.840190558683413,0.831095712429623,0.756604590731919,0.671719359029883,0.611520138588133,0.582936336076224,0.572542226071893,0.574707665656128,0.587267215244695,0.644218276310091,0.755521870939801,0.884798614118666];
-    PL_base=[5.704;5.705;5.631;6.518;4.890;5.705;5.847]*1000;%¸ººÉ·Ö²¼
-    PL=PL_base*Loadcurve;%»ù´¡¸ººÉ
-    Pf=sdpvar(7,24);%À¡Ïß¹¦ÂÊ
-    Pf(1,:)=PL(1,:)+Pch(1,:)-Pdis(1,:);Pf(2,:)=PL(2,:);Pf(3,:)=PL(3,:);Pf(4,:)=PL(4,:)+Pch(2,:)-Pdis(2,:);Pf(5,:)=PL(5,:)+Pch(3,:)-Pdis(3,:);Pf(6,:)=PL(6,:);Pf(7,:)=PL(7,:)+Pch(4,:)-Pdis(4,:);%À¡Ïß¹¦ÂÊ×é³É
-    Pf_limit=1000*[40,40,40,40,40,40,40]';%À¡Ïß¹¦ÂÊÏŞÖÆ
-    Pg=sdpvar(10,24);%·¢µçÉÌ·Ö¶ÎµçÁ¿
-    Pg_step=1000*[20,5,3,2,2,2,2,2,2,100]';%±¨¼ÛÇø¼ä
-    Price_DSO=[3:12]'*0.1;%·Ö¶Îµç¼Û
-    Lagrant_G_left=sdpvar(10,24);%·¢µçÉÌµçÁ¿ÏÂ½ç
-    Lagrant_G_right=sdpvar(10,24);%·¢µçÉÌµçÁ¿ÉÏ½ç
-    b_Lagrant_G_left=binvar(10,24);%·¢µçÉÌµçÁ¿ÏÂ½ç²¼¶û±äÁ¿
-    b_Lagrant_G_right=binvar(10,24);%·¢µçÉÌµçÁ¿ÉÏ½ç²¼¶û±äÁ¿
-    Lagrant_L_left=sdpvar(7,24);%ÏßÂ·¹¦ÂÊÏÂ½ç
-    Lagrant_L_right=sdpvar(7,24);%ÏßÂ·¹¦ÂÊÉÏ½ç
-    b_Lagrant_L_left=binvar(7,24);%ÏßÂ·¹¦ÂÊÉÏ½ç²¼¶û±äÁ¿
-    b_Lagrant_L_right=binvar(7,24);%ÏßÂ·¹¦ÂÊÏÂ½ç²¼¶û±äÁ¿
-    Lagrant_G=sdpvar(1,24);%Æ½ºâ½Úµãµç¼Û
+    PL_base=[5.704;5.705;5.631;6.518;4.890;5.705;5.847]*1000;%è´Ÿè·åˆ†å¸ƒ
+    PL=PL_base*Loadcurve;%åŸºç¡€è´Ÿè·
+    Pf=sdpvar(7,24);%é¦ˆçº¿åŠŸç‡
+    Pf(1,:)=PL(1,:)+Pch(1,:)-Pdis(1,:);Pf(2,:)=PL(2,:);Pf(3,:)=PL(3,:);Pf(4,:)=PL(4,:)+Pch(2,:)-Pdis(2,:);Pf(5,:)=PL(5,:)+Pch(3,:)-Pdis(3,:);Pf(6,:)=PL(6,:);Pf(7,:)=PL(7,:)+Pch(4,:)-Pdis(4,:);%é¦ˆçº¿åŠŸç‡ç»„æˆ
+    Pf_limit=1000*[40,40,40,40,40,40,40]';%é¦ˆçº¿åŠŸç‡é™åˆ¶
+    Pg=sdpvar(10,24);%å‘ç”µå•†åˆ†æ®µç”µé‡
+    Pg_step=1000*[20,5,3,2,2,2,2,2,2,100]';%æŠ¥ä»·åŒºé—´
+    Price_DSO=[3:12]'*0.1;%åˆ†æ®µç”µä»·
+    Lagrant_G_left=sdpvar(10,24);%å‘ç”µå•†ç”µé‡ä¸‹ç•Œ
+    Lagrant_G_right=sdpvar(10,24);%å‘ç”µå•†ç”µé‡ä¸Šç•Œ
+    b_Lagrant_G_left=binvar(10,24);%å‘ç”µå•†ç”µé‡ä¸‹ç•Œå¸ƒå°”å˜é‡
+    b_Lagrant_G_right=binvar(10,24);%å‘ç”µå•†ç”µé‡ä¸Šç•Œå¸ƒå°”å˜é‡
+    Lagrant_L_left=sdpvar(7,24);%çº¿è·¯åŠŸç‡ä¸‹ç•Œ
+    Lagrant_L_right=sdpvar(7,24);%çº¿è·¯åŠŸç‡ä¸Šç•Œ
+    b_Lagrant_L_left=binvar(7,24);%çº¿è·¯åŠŸç‡ä¸Šç•Œå¸ƒå°”å˜é‡
+    b_Lagrant_L_right=binvar(7,24);%çº¿è·¯åŠŸç‡ä¸‹ç•Œå¸ƒå°”å˜é‡
+    Lagrant_G=sdpvar(1,24);%å¹³è¡¡èŠ‚ç‚¹ç”µä»·
     DLMP=sdpvar(7,24);%DLMP
     Ckkt=[sum(Pg)==sum(Pf),
         0<=Pg<=Pg_step*ones(1,24),
@@ -769,10 +769,10 @@ for i=1:51%³¢ÊÔ²»Í¬·Åµç²¹³¥ÏµÊı
         Pg_step*ones(1,24)-Pg<=1E6*b_Lagrant_G_right,0<=Lagrant_G_right<=(1-b_Lagrant_G_right),
         -Pf_limit*ones(1,24)<=Pf<=Pf_limit*ones(1,24),
         Pf+Pf_limit*ones(1,24)<=1E6*b_Lagrant_L_left,0<=Lagrant_L_left<=(1-b_Lagrant_L_left),
-        -Pf+Pf_limit*ones(1,24)<=1E6*b_Lagrant_L_right,0<=Lagrant_L_right<=(1-b_Lagrant_L_right)];%ÊĞ³¡³öÇåÎÊÌâµÄKKTÌõ¼ş
+        -Pf+Pf_limit*ones(1,24)<=1E6*b_Lagrant_L_right,0<=Lagrant_L_right<=(1-b_Lagrant_L_right)];%å¸‚åœºå‡ºæ¸…é—®é¢˜çš„KKTæ¡ä»¶
     Obj=sum(sum((Price_DSO*ones(1,24)).*Pg))-sum(sum(DLMP.*PL))+sum(sum((Pg_step*ones(1,24)).*Lagrant_G_right))+sum(sum((Lagrant_L_left+Lagrant_L_right).*(Pf_limit*ones(1,24))));
-    %Çó½âÎÊÌâ
-    C=[Ccs,Ckkt];%Ô¼ÊøÌõ¼ş
+    %æ±‚è§£é—®é¢˜
+    C=[Ccs,Ckkt];%çº¦æŸæ¡ä»¶
     ops=sdpsettings('solver','gurobi');
     result=solvesdp(C,Obj,ops);
     DLMP=double(DLMP);
@@ -782,17 +782,17 @@ for i=1:51%³¢ÊÔ²»Í¬·Åµç²¹³¥ÏµÊı
     Pdis=double(Pdis);
     Pg=double(Pg);
     S=double(S);
-    Cost=sum(sum((Pf-PL).*DLMP));%×ÜÓÃµç·ÑÓÃ
-    Cost_b=sum(sum(((Pf-PL)>0).*(Pf-PL).*DLMP));%×Ü¹ºµç·ÑÓÃ
-    Cost_s=-sum(sum(((Pf-PL)<0).*(Pf-PL).*DLMP));%×ÜÊÛµçÊÕÈë
-    VD=max(sum(Pf))-min(sum(Pf));%ÅäµçÍø·å¹È²î
+    Cost=sum(sum((Pf-PL).*DLMP));%æ€»ç”¨ç”µè´¹ç”¨
+    Cost_b=sum(sum(((Pf-PL)>0).*(Pf-PL).*DLMP));%æ€»è´­ç”µè´¹ç”¨
+    Cost_s=-sum(sum(((Pf-PL)<0).*(Pf-PL).*DLMP));%æ€»å”®ç”µæ”¶å…¥
+    VD=max(sum(Pf))-min(sum(Pf));%é…ç”µç½‘å³°è°·å·®
     data_cost(i)=Cost;
     data_cost_b(i)=Cost_b;
     data_cost_s(i)=Cost_s;
     data_VD(i)=VD;
 end
-%% µÚÆß½Ú£¬ÈÕÇ°¿Éµ÷¶ÈÇ±Á¦Ô¤²âËã·¨¶Ô±È
-%Ëã·¨1£º¸öÌå
+%% ç¬¬ä¸ƒèŠ‚ï¼Œæ—¥å‰å¯è°ƒåº¦æ½œåŠ›é¢„æµ‹ç®—æ³•å¯¹æ¯”
+%ç®—æ³•1ï¼šä¸ªä½“
 clear
 clc
 close all
@@ -800,14 +800,14 @@ load data_EV
 X_CS1=data_CS1.X;X_CS2=data_CS2.X;X_CS3=data_CS3.X;X_CS4=data_CS4.X;
 S0_CS1=data_CS1.S0;S0_CS2=data_CS2.S0;S0_CS3=data_CS3.S0;S0_CS4=data_CS4.S0;
 m1=length(S0_CS1);m2=length(S0_CS2);m3=length(S0_CS3);m4=length(S0_CS4);
-%³äµçÕ¾Í¶±êÎÊÌâ
-pch_CS1=sdpvar(m1,24);pdis_CS1=sdpvar(m1,24);%µç¶¯Æû³µ¸öÌåµÄ³ä·Åµç¹¦ÂÊ
+%å……ç”µç«™æŠ•æ ‡é—®é¢˜
+pch_CS1=sdpvar(m1,24);pdis_CS1=sdpvar(m1,24);%ç”µåŠ¨æ±½è½¦ä¸ªä½“çš„å……æ”¾ç”µåŠŸç‡
 pch_CS2=sdpvar(m2,24);pdis_CS2=sdpvar(m2,24);
 pch_CS3=sdpvar(m3,24);pdis_CS3=sdpvar(m3,24);
 pch_CS4=sdpvar(m4,24);pdis_CS4=sdpvar(m4,24);
-s_CS1=sdpvar(m1,24);s_CS2=sdpvar(m2,24);s_CS3=sdpvar(m3,24);s_CS4=sdpvar(m4,24);%µç¶¯Æû³µ¸öÌåµÄSOC
-Pch=sdpvar(4,24);%³äµçÕ¾³äµç¹¦ÂÊ
-Pdis=sdpvar(4,24);%³äµçÕ¾·Åµç¹¦ÂÊ
+s_CS1=sdpvar(m1,24);s_CS2=sdpvar(m2,24);s_CS3=sdpvar(m3,24);s_CS4=sdpvar(m4,24);%ç”µåŠ¨æ±½è½¦ä¸ªä½“çš„SOC
+Pch=sdpvar(4,24);%å……ç”µç«™å……ç”µåŠŸç‡
+Pdis=sdpvar(4,24);%å……ç”µç«™æ”¾ç”µåŠŸç‡
 Ccs=[Pch(1,:)==sum(pch_CS1),Pch(2,:)==sum(pch_CS2),Pch(3,:)==sum(pch_CS3),Pch(4,:)==sum(pch_CS4),
     Pdis(1,:)==sum(pdis_CS1),Pdis(2,:)==sum(pdis_CS2),Pdis(3,:)==sum(pdis_CS3),Pdis(4,:)==sum(pdis_CS4),
     0<=pch_CS1<=6.6*X_CS1,0<=pch_CS2<=6.6*X_CS2,0<=pch_CS3<=6.6*X_CS3,0<=pch_CS4<=6.6*X_CS4,
@@ -825,26 +825,26 @@ Ccs=[Pch(1,:)==sum(pch_CS1),Pch(2,:)==sum(pch_CS2),Pch(3,:)==sum(pch_CS3),Pch(4,
     sum(0.95*pch_CS2-pdis_CS2/0.95,2)==32*0.9-S0_CS2',
     sum(0.95*pch_CS3-pdis_CS3/0.95,2)==32*0.9-S0_CS3',
     sum(0.95*pch_CS4-pdis_CS4/0.95,2)==32*0.9-S0_CS4'
-    ];%Ô¼ÊøÌõ¼ş
-% %ÊĞ³¡³öÇåÎÊÌâ
+    ];%çº¦æŸæ¡ä»¶
+% %å¸‚åœºå‡ºæ¸…é—®é¢˜
 Loadcurve=[0.955391944564747,0.978345604157644,1,0.995019488956258,0.972932005197055,0.970333477695972,0.930489389346037,0.890428757037679,0.902771762667822,0.941966219142486,0.911000433087917,0.862061498484192,0.840190558683413,0.831095712429623,0.756604590731919,0.671719359029883,0.611520138588133,0.582936336076224,0.572542226071893,0.574707665656128,0.587267215244695,0.644218276310091,0.755521870939801,0.884798614118666];
-PL_base=[5.704;5.705;5.631;6.518;4.890;5.705;5.847]*1000;%¸ººÉ·Ö²¼
-PL=PL_base*Loadcurve;%»ù´¡¸ººÉ
-Pf=sdpvar(7,24);%À¡Ïß¹¦ÂÊ
-Pf(1,:)=PL(1,:)+Pch(1,:)-Pdis(1,:);Pf(2,:)=PL(2,:);Pf(3,:)=PL(3,:);Pf(4,:)=PL(4,:)+Pch(2,:)-Pdis(2,:);Pf(5,:)=PL(5,:)+Pch(3,:)-Pdis(3,:);Pf(6,:)=PL(6,:);Pf(7,:)=PL(7,:)+Pch(4,:)-Pdis(4,:);%À¡Ïß¹¦ÂÊ×é³É
-Pf_limit=1000*[40,40,40,40,40,40,40]';%À¡Ïß¹¦ÂÊÏŞÖÆ
-Pg=sdpvar(10,24);%·¢µçÉÌ·Ö¶ÎµçÁ¿
-Pg_step=1000*[20,5,3,2,2,2,2,2,2,100]';%±¨¼ÛÇø¼ä
-Price_DSO=[3:12]'*0.1;%·Ö¶Îµç¼Û
-Lagrant_G_left=sdpvar(10,24);%·¢µçÉÌµçÁ¿ÏÂ½ç
-Lagrant_G_right=sdpvar(10,24);%·¢µçÉÌµçÁ¿ÉÏ½ç
-b_Lagrant_G_left=binvar(10,24);%·¢µçÉÌµçÁ¿ÏÂ½ç²¼¶û±äÁ¿
-b_Lagrant_G_right=binvar(10,24);%·¢µçÉÌµçÁ¿ÉÏ½ç²¼¶û±äÁ¿
-Lagrant_L_left=sdpvar(7,24);%ÏßÂ·¹¦ÂÊÏÂ½ç
-Lagrant_L_right=sdpvar(7,24);%ÏßÂ·¹¦ÂÊÉÏ½ç
-b_Lagrant_L_left=binvar(7,24);%ÏßÂ·¹¦ÂÊÉÏ½ç²¼¶û±äÁ¿
-b_Lagrant_L_right=binvar(7,24);%ÏßÂ·¹¦ÂÊÏÂ½ç²¼¶û±äÁ¿
-Lagrant_G=sdpvar(1,24);%Æ½ºâ½Úµãµç¼Û
+PL_base=[5.704;5.705;5.631;6.518;4.890;5.705;5.847]*1000;%è´Ÿè·åˆ†å¸ƒ
+PL=PL_base*Loadcurve;%åŸºç¡€è´Ÿè·
+Pf=sdpvar(7,24);%é¦ˆçº¿åŠŸç‡
+Pf(1,:)=PL(1,:)+Pch(1,:)-Pdis(1,:);Pf(2,:)=PL(2,:);Pf(3,:)=PL(3,:);Pf(4,:)=PL(4,:)+Pch(2,:)-Pdis(2,:);Pf(5,:)=PL(5,:)+Pch(3,:)-Pdis(3,:);Pf(6,:)=PL(6,:);Pf(7,:)=PL(7,:)+Pch(4,:)-Pdis(4,:);%é¦ˆçº¿åŠŸç‡ç»„æˆ
+Pf_limit=1000*[40,40,40,40,40,40,40]';%é¦ˆçº¿åŠŸç‡é™åˆ¶
+Pg=sdpvar(10,24);%å‘ç”µå•†åˆ†æ®µç”µé‡
+Pg_step=1000*[20,5,3,2,2,2,2,2,2,100]';%æŠ¥ä»·åŒºé—´
+Price_DSO=[3:12]'*0.1;%åˆ†æ®µç”µä»·
+Lagrant_G_left=sdpvar(10,24);%å‘ç”µå•†ç”µé‡ä¸‹ç•Œ
+Lagrant_G_right=sdpvar(10,24);%å‘ç”µå•†ç”µé‡ä¸Šç•Œ
+b_Lagrant_G_left=binvar(10,24);%å‘ç”µå•†ç”µé‡ä¸‹ç•Œå¸ƒå°”å˜é‡
+b_Lagrant_G_right=binvar(10,24);%å‘ç”µå•†ç”µé‡ä¸Šç•Œå¸ƒå°”å˜é‡
+Lagrant_L_left=sdpvar(7,24);%çº¿è·¯åŠŸç‡ä¸‹ç•Œ
+Lagrant_L_right=sdpvar(7,24);%çº¿è·¯åŠŸç‡ä¸Šç•Œ
+b_Lagrant_L_left=binvar(7,24);%çº¿è·¯åŠŸç‡ä¸Šç•Œå¸ƒå°”å˜é‡
+b_Lagrant_L_right=binvar(7,24);%çº¿è·¯åŠŸç‡ä¸‹ç•Œå¸ƒå°”å˜é‡
+Lagrant_G=sdpvar(1,24);%å¹³è¡¡èŠ‚ç‚¹ç”µä»·
 DLMP=sdpvar(7,24);%DLMP
 Ckkt=[sum(Pg)==sum(Pf),
     0<=Pg<=Pg_step*ones(1,24),
@@ -854,10 +854,10 @@ Ckkt=[sum(Pg)==sum(Pf),
     Pg_step*ones(1,24)-Pg<=1E6*b_Lagrant_G_right,0<=Lagrant_G_right<=(1-b_Lagrant_G_right),
     -Pf_limit*ones(1,24)<=Pf<=Pf_limit*ones(1,24),
     Pf+Pf_limit*ones(1,24)<=1E6*b_Lagrant_L_left,0<=Lagrant_L_left<=(1-b_Lagrant_L_left),
-    -Pf+Pf_limit*ones(1,24)<=1E6*b_Lagrant_L_right,0<=Lagrant_L_right<=(1-b_Lagrant_L_right)];%ÊĞ³¡³öÇåÎÊÌâµÄKKTÌõ¼ş
+    -Pf+Pf_limit*ones(1,24)<=1E6*b_Lagrant_L_right,0<=Lagrant_L_right<=(1-b_Lagrant_L_right)];%å¸‚åœºå‡ºæ¸…é—®é¢˜çš„KKTæ¡ä»¶
 Obj=sum(sum((Price_DSO*ones(1,24)).*Pg))-sum(sum(DLMP.*PL))+sum(sum((Pg_step*ones(1,24)).*Lagrant_G_right))+sum(sum((Lagrant_L_left+Lagrant_L_right).*(Pf_limit*ones(1,24))));
-%Çó½âÎÊÌâ
-C=[Ccs,Ckkt];%Ô¼ÊøÌõ¼ş
+%æ±‚è§£é—®é¢˜
+C=[Ccs,Ckkt];%çº¦æŸæ¡ä»¶
 ops=sdpsettings('solver','gurobi');
 result=solvesdp(C,Obj,ops);
 DLMP=double(DLMP);
@@ -866,10 +866,10 @@ Pf=double(Pf);
 Pch=double(Pch);
 Pdis=double(Pdis);
 Pg=double(Pg);
-%ÊµÊ±µ÷¶È
+%å®æ—¶è°ƒåº¦
 load data_RT_potential
 load result_order
-Pch1=RT_CS1(96).Pch;Pdis1=RT_CS1(96).Pdis;Smin1=RT_CS1(96).Smin;Smax1=RT_CS1(96).Smax;dS1=RT_CS1(96).dS;%È¡×îºóÒ»¸öÊ±¿ÌµÄ¿Éµ÷¶ÈÇ±Á¦
+Pch1=RT_CS1(96).Pch;Pdis1=RT_CS1(96).Pdis;Smin1=RT_CS1(96).Smin;Smax1=RT_CS1(96).Smax;dS1=RT_CS1(96).dS;%å–æœ€åä¸€ä¸ªæ—¶åˆ»çš„å¯è°ƒåº¦æ½œåŠ›
 Pch2=RT_CS2(96).Pch;Pdis2=RT_CS2(96).Pdis;Smin2=RT_CS2(96).Smin;Smax2=RT_CS2(96).Smax;dS2=RT_CS2(96).dS;
 Pch3=RT_CS3(96).Pch;Pdis3=RT_CS3(96).Pdis;Smin3=RT_CS3(96).Smin;Smax3=RT_CS3(96).Smax;dS3=RT_CS3(96).dS;
 Pch4=RT_CS4(96).Pch;Pdis4=RT_CS4(96).Pdis;Smin4=RT_CS4(96).Smin;Smax4=RT_CS4(96).Smax;dS4=RT_CS4(96).dS;
@@ -878,38 +878,38 @@ Pdismax=[Pdis1;Pdis2;Pdis3;Pdis4];
 Smin=[Smin1;Smin2;Smin3;Smin4];
 Smax=[Smax1;Smax2;Smax3;Smax4];
 dS=[dS1;dS2;dS3;dS4];
-Link=zeros(24,96);%Ê±¶Î»»Ëã¾ØÕó(ÈÕÇ°1h»»ËãÎªÊµÊ±15min)
+Link=zeros(24,96);%æ—¶æ®µæ¢ç®—çŸ©é˜µ(æ—¥å‰1hæ¢ç®—ä¸ºå®æ—¶15min)
 for i=1:24
     Link(i,4*i-3:4*i)=1;
 end
-DA_Ps=Pch-Pdis;%ÈÕÇ°µ÷¶ÈÊı¾İ
-DA_Ps=DA_Ps*Link;%Ê±¶Î»»Ëã
-DA_Pf=Pf*Link;%ÈÕÇ°×Ü¹¦ÂÊ
-%³äµçÕ¾Í¶±êÎÊÌâ
-Pch=sdpvar(4,96);%³äµçÕ¾³äµç¹¦ÂÊ
-Pdis=sdpvar(4,96);%³äµçÕ¾·Åµç¹¦ÂÊ
-S=sdpvar(4,96);%³äµçÕ¾¹ãÒå´¢ÄÜSOC
-Ccs=[0<=Pch<=Pchmax,0<=Pdis<=Pdismax,Smin<=S<=Smax,S(:,1)==0.95*0.25*Pch(:,1)-0.25*Pdis(:,1)/0.95+dS(:,1),S(:,2:96)==S(:,1:95)+0.25*0.95*Pch(:,2:96)-0.25*Pdis(:,2:96)/0.95+dS(:,2:96)];%Ô¼ÊøÌõ¼ş
-% %ÊĞ³¡³öÇåÎÊÌâ
+DA_Ps=Pch-Pdis;%æ—¥å‰è°ƒåº¦æ•°æ®
+DA_Ps=DA_Ps*Link;%æ—¶æ®µæ¢ç®—
+DA_Pf=Pf*Link;%æ—¥å‰æ€»åŠŸç‡
+%å……ç”µç«™æŠ•æ ‡é—®é¢˜
+Pch=sdpvar(4,96);%å……ç”µç«™å……ç”µåŠŸç‡
+Pdis=sdpvar(4,96);%å……ç”µç«™æ”¾ç”µåŠŸç‡
+S=sdpvar(4,96);%å……ç”µç«™å¹¿ä¹‰å‚¨èƒ½SOC
+Ccs=[0<=Pch<=Pchmax,0<=Pdis<=Pdismax,Smin<=S<=Smax,S(:,1)==0.95*0.25*Pch(:,1)-0.25*Pdis(:,1)/0.95+dS(:,1),S(:,2:96)==S(:,1:95)+0.25*0.95*Pch(:,2:96)-0.25*Pdis(:,2:96)/0.95+dS(:,2:96)];%çº¦æŸæ¡ä»¶
+% %å¸‚åœºå‡ºæ¸…é—®é¢˜
 Loadcurve=[0.955391944564747,0.978345604157644,1,0.995019488956258,0.972932005197055,0.970333477695972,0.930489389346037,0.890428757037679,0.902771762667822,0.941966219142486,0.911000433087917,0.862061498484192,0.840190558683413,0.831095712429623,0.756604590731919,0.671719359029883,0.611520138588133,0.582936336076224,0.572542226071893,0.574707665656128,0.587267215244695,0.644218276310091,0.755521870939801,0.884798614118666];
-Loadcurve=Loadcurve*Link;%»»³É96¸öÊ±¶Î
-PL_base=[5.704;5.705;5.631;6.518;4.890;5.705;5.847]*1000;%¸ººÉ·Ö²¼
-PL=PL_base*Loadcurve;%»ù´¡¸ººÉ
-Pf=sdpvar(7,96);%À¡Ïß¹¦ÂÊ
-Pf(1,:)=PL(1,:)+Pch(1,:)-Pdis(1,:);Pf(2,:)=PL(2,:);Pf(3,:)=PL(3,:);Pf(4,:)=PL(4,:)+Pch(2,:)-Pdis(2,:);Pf(5,:)=PL(5,:)+Pch(3,:)-Pdis(3,:);Pf(6,:)=PL(6,:);Pf(7,:)=PL(7,:)+Pch(4,:)-Pdis(4,:);%À¡Ïß¹¦ÂÊ×é³É
-Pf_limit=1000*[40,40,40,40,40,40,40]';%À¡Ïß¹¦ÂÊÏŞÖÆ
-Pg=sdpvar(10,96);%·¢µçÉÌ·Ö¶ÎµçÁ¿
-Pg_step=1000*[20,5,3,2,2,2,2,2,2,100]';%±¨¼ÛÇø¼ä
-Price_DSO=[3:12]'*0.1;%·Ö¶Îµç¼Û
-Lagrant_G_left=sdpvar(10,96);%·¢µçÉÌµçÁ¿ÏÂ½ç
-Lagrant_G_right=sdpvar(10,96);%·¢µçÉÌµçÁ¿ÉÏ½ç
-b_Lagrant_G_left=binvar(10,96);%·¢µçÉÌµçÁ¿ÏÂ½ç²¼¶û±äÁ¿
-b_Lagrant_G_right=binvar(10,96);%·¢µçÉÌµçÁ¿ÉÏ½ç²¼¶û±äÁ¿
-Lagrant_L_left=sdpvar(7,96);%ÏßÂ·¹¦ÂÊÏÂ½ç
-Lagrant_L_right=sdpvar(7,96);%ÏßÂ·¹¦ÂÊÉÏ½ç
-b_Lagrant_L_left=binvar(7,96);%ÏßÂ·¹¦ÂÊÉÏ½ç²¼¶û±äÁ¿
-b_Lagrant_L_right=binvar(7,96);%ÏßÂ·¹¦ÂÊÏÂ½ç²¼¶û±äÁ¿
-Lagrant_G=sdpvar(1,96);%Æ½ºâ½Úµãµç¼Û
+Loadcurve=Loadcurve*Link;%æ¢æˆ96ä¸ªæ—¶æ®µ
+PL_base=[5.704;5.705;5.631;6.518;4.890;5.705;5.847]*1000;%è´Ÿè·åˆ†å¸ƒ
+PL=PL_base*Loadcurve;%åŸºç¡€è´Ÿè·
+Pf=sdpvar(7,96);%é¦ˆçº¿åŠŸç‡
+Pf(1,:)=PL(1,:)+Pch(1,:)-Pdis(1,:);Pf(2,:)=PL(2,:);Pf(3,:)=PL(3,:);Pf(4,:)=PL(4,:)+Pch(2,:)-Pdis(2,:);Pf(5,:)=PL(5,:)+Pch(3,:)-Pdis(3,:);Pf(6,:)=PL(6,:);Pf(7,:)=PL(7,:)+Pch(4,:)-Pdis(4,:);%é¦ˆçº¿åŠŸç‡ç»„æˆ
+Pf_limit=1000*[40,40,40,40,40,40,40]';%é¦ˆçº¿åŠŸç‡é™åˆ¶
+Pg=sdpvar(10,96);%å‘ç”µå•†åˆ†æ®µç”µé‡
+Pg_step=1000*[20,5,3,2,2,2,2,2,2,100]';%æŠ¥ä»·åŒºé—´
+Price_DSO=[3:12]'*0.1;%åˆ†æ®µç”µä»·
+Lagrant_G_left=sdpvar(10,96);%å‘ç”µå•†ç”µé‡ä¸‹ç•Œ
+Lagrant_G_right=sdpvar(10,96);%å‘ç”µå•†ç”µé‡ä¸Šç•Œ
+b_Lagrant_G_left=binvar(10,96);%å‘ç”µå•†ç”µé‡ä¸‹ç•Œå¸ƒå°”å˜é‡
+b_Lagrant_G_right=binvar(10,96);%å‘ç”µå•†ç”µé‡ä¸Šç•Œå¸ƒå°”å˜é‡
+Lagrant_L_left=sdpvar(7,96);%çº¿è·¯åŠŸç‡ä¸‹ç•Œ
+Lagrant_L_right=sdpvar(7,96);%çº¿è·¯åŠŸç‡ä¸Šç•Œ
+b_Lagrant_L_left=binvar(7,96);%çº¿è·¯åŠŸç‡ä¸Šç•Œå¸ƒå°”å˜é‡
+b_Lagrant_L_right=binvar(7,96);%çº¿è·¯åŠŸç‡ä¸‹ç•Œå¸ƒå°”å˜é‡
+Lagrant_G=sdpvar(1,96);%å¹³è¡¡èŠ‚ç‚¹ç”µä»·
 DLMP=sdpvar(7,96);%DLMP
 Ckkt=[sum(Pg)==sum(Pf),
     0<=Pg<=Pg_step*ones(1,96),
@@ -919,10 +919,10 @@ Ckkt=[sum(Pg)==sum(Pf),
     Pg_step*ones(1,96)-Pg<=1E6*b_Lagrant_G_right,0<=Lagrant_G_right<=(1-b_Lagrant_G_right),
     -Pf_limit*ones(1,96)<=Pf<=Pf_limit*ones(1,96),
     Pf+Pf_limit*ones(1,96)<=1E6*b_Lagrant_L_left,0<=Lagrant_L_left<=(1-b_Lagrant_L_left),
-    -Pf+Pf_limit*ones(1,96)<=1E6*b_Lagrant_L_right,0<=Lagrant_L_right<=(1-b_Lagrant_L_right)];%ÊĞ³¡³öÇåÎÊÌâµÄKKTÌõ¼ş
+    -Pf+Pf_limit*ones(1,96)<=1E6*b_Lagrant_L_right,0<=Lagrant_L_right<=(1-b_Lagrant_L_right)];%å¸‚åœºå‡ºæ¸…é—®é¢˜çš„KKTæ¡ä»¶
 Obj=0.25*sum(sum((Price_DSO*ones(1,96)).*Pg))-sum(sum(DLMP.*PL))+sum(sum((Pg_step*ones(1,96)).*Lagrant_G_right))+sum(sum((Lagrant_L_left+Lagrant_L_right).*(Pf_limit*ones(1,96))))+0.1*0.25*sum(sum(abs(Pch-Pdis-DA_Ps)));
-%Çó½âÎÊÌâ
-C=[Ccs,Ckkt];%Ô¼ÊøÌõ¼ş
+%æ±‚è§£é—®é¢˜
+C=[Ccs,Ckkt];%çº¦æŸæ¡ä»¶
 result=solvesdp(C,Obj);
 DLMP=double(DLMP);
 Lagrant_G=double(Lagrant_G);
@@ -932,17 +932,17 @@ Pdis=double(Pdis);
 Pg=double(Pg);
 S=double(S);
 double(Obj)
-figure(1)%ÊµÊ±ÈÕÇ°½á¹û¶Ô±È
+figure(1)%å®æ—¶æ—¥å‰ç»“æœå¯¹æ¯”
 hold on
 plot(sum(Pf),'r.-')
 plot(sum(DA_Pf),'b--');
-Cost=sum(sum((Pf-PL).*DLMP));%×ÜÓÃµç·ÑÓÃ
-Cost_b=sum(sum(((Pf-PL)>0).*(Pf-PL).*DLMP))%×Ü¹ºµç·ÑÓÃ
-Cost_s=-sum(sum(((Pf-PL)<0).*(Pf-PL).*DLMP))%×ÜÊÛµçÊÕÈë
-Cost_r=0.1*0.25*sum(sum(abs(Pch-Pdis-DA_Ps)))%Æ½ºâ·ÑÓÃ
-MAPE=100*sum(abs((sum(DA_Pf)-sum(Pf))./sum(DA_Pf))/96);%Æ½¾ù°Ù·ÖÎó²î
-%% µÚÆß½Ú£¬ÈÕÇ°¿Éµ÷¶ÈÇ±Á¦Ô¤²âËã·¨¶Ô±È
-%Ëã·¨2£ºÈºÌå
+Cost=sum(sum((Pf-PL).*DLMP));%æ€»ç”¨ç”µè´¹ç”¨
+Cost_b=sum(sum(((Pf-PL)>0).*(Pf-PL).*DLMP))%æ€»è´­ç”µè´¹ç”¨
+Cost_s=-sum(sum(((Pf-PL)<0).*(Pf-PL).*DLMP))%æ€»å”®ç”µæ”¶å…¥
+Cost_r=0.1*0.25*sum(sum(abs(Pch-Pdis-DA_Ps)))%å¹³è¡¡è´¹ç”¨
+MAPE=100*sum(abs((sum(DA_Pf)-sum(Pf))./sum(DA_Pf))/96);%å¹³å‡ç™¾åˆ†è¯¯å·®
+%% ç¬¬ä¸ƒèŠ‚ï¼Œæ—¥å‰å¯è°ƒåº¦æ½œåŠ›é¢„æµ‹ç®—æ³•å¯¹æ¯”
+%ç®—æ³•2ï¼šç¾¤ä½“
 clear
 clc
 close all
@@ -952,32 +952,32 @@ S0_CS1=data_CS1.S0;S0_CS2=data_CS2.S0;S0_CS3=data_CS3.S0;S0_CS4=data_CS4.S0;
 m1=length(S0_CS1);m2=length(S0_CS2);m3=length(S0_CS3);m4=length(S0_CS4);
 X=[sum(X_CS1);sum(X_CS2);sum(X_CS3);sum(X_CS4)];
 Energy=[32*0.9*m1-sum(S0_CS1);32*0.9*m2-sum(S0_CS2);32*0.9*m3-sum(S0_CS3);32*0.9*m4-sum(S0_CS4)];
-%³äµçÕ¾Í¶±êÎÊÌâ
-Pch=sdpvar(4,24);%³äµçÕ¾³äµç¹¦ÂÊ
-Pdis=sdpvar(4,24);%³äµçÕ¾·Åµç¹¦ÂÊ
+%å……ç”µç«™æŠ•æ ‡é—®é¢˜
+Pch=sdpvar(4,24);%å……ç”µç«™å……ç”µåŠŸç‡
+Pdis=sdpvar(4,24);%å……ç”µç«™æ”¾ç”µåŠŸç‡
 Ccs=[0<=Pch<=6.6*X,
     0<=Pdis<=6.6*X,
     sum(Pch-Pdis,2)==Energy
-    ];%Ô¼ÊøÌõ¼ş
-% %ÊĞ³¡³öÇåÎÊÌâ
+    ];%çº¦æŸæ¡ä»¶
+% %å¸‚åœºå‡ºæ¸…é—®é¢˜
 Loadcurve=[0.955391944564747,0.978345604157644,1,0.995019488956258,0.972932005197055,0.970333477695972,0.930489389346037,0.890428757037679,0.902771762667822,0.941966219142486,0.911000433087917,0.862061498484192,0.840190558683413,0.831095712429623,0.756604590731919,0.671719359029883,0.611520138588133,0.582936336076224,0.572542226071893,0.574707665656128,0.587267215244695,0.644218276310091,0.755521870939801,0.884798614118666];
-PL_base=[5.704;5.705;5.631;6.518;4.890;5.705;5.847]*1000;%¸ººÉ·Ö²¼
-PL=PL_base*Loadcurve;%»ù´¡¸ººÉ
-Pf=sdpvar(7,24);%À¡Ïß¹¦ÂÊ
-Pf(1,:)=PL(1,:)+Pch(1,:)-Pdis(1,:);Pf(2,:)=PL(2,:);Pf(3,:)=PL(3,:);Pf(4,:)=PL(4,:)+Pch(2,:)-Pdis(2,:);Pf(5,:)=PL(5,:)+Pch(3,:)-Pdis(3,:);Pf(6,:)=PL(6,:);Pf(7,:)=PL(7,:)+Pch(4,:)-Pdis(4,:);%À¡Ïß¹¦ÂÊ×é³É
-Pf_limit=1000*[40,40,40,40,40,40,40]';%À¡Ïß¹¦ÂÊÏŞÖÆ
-Pg=sdpvar(10,24);%·¢µçÉÌ·Ö¶ÎµçÁ¿
-Pg_step=1000*[20,5,3,2,2,2,2,2,2,100]';%±¨¼ÛÇø¼ä
-Price_DSO=[3:12]'*0.1;%·Ö¶Îµç¼Û
-Lagrant_G_left=sdpvar(10,24);%·¢µçÉÌµçÁ¿ÏÂ½ç
-Lagrant_G_right=sdpvar(10,24);%·¢µçÉÌµçÁ¿ÉÏ½ç
-b_Lagrant_G_left=binvar(10,24);%·¢µçÉÌµçÁ¿ÏÂ½ç²¼¶û±äÁ¿
-b_Lagrant_G_right=binvar(10,24);%·¢µçÉÌµçÁ¿ÉÏ½ç²¼¶û±äÁ¿
-Lagrant_L_left=sdpvar(7,24);%ÏßÂ·¹¦ÂÊÏÂ½ç
-Lagrant_L_right=sdpvar(7,24);%ÏßÂ·¹¦ÂÊÉÏ½ç
-b_Lagrant_L_left=binvar(7,24);%ÏßÂ·¹¦ÂÊÉÏ½ç²¼¶û±äÁ¿
-b_Lagrant_L_right=binvar(7,24);%ÏßÂ·¹¦ÂÊÏÂ½ç²¼¶û±äÁ¿
-Lagrant_G=sdpvar(1,24);%Æ½ºâ½Úµãµç¼Û
+PL_base=[5.704;5.705;5.631;6.518;4.890;5.705;5.847]*1000;%è´Ÿè·åˆ†å¸ƒ
+PL=PL_base*Loadcurve;%åŸºç¡€è´Ÿè·
+Pf=sdpvar(7,24);%é¦ˆçº¿åŠŸç‡
+Pf(1,:)=PL(1,:)+Pch(1,:)-Pdis(1,:);Pf(2,:)=PL(2,:);Pf(3,:)=PL(3,:);Pf(4,:)=PL(4,:)+Pch(2,:)-Pdis(2,:);Pf(5,:)=PL(5,:)+Pch(3,:)-Pdis(3,:);Pf(6,:)=PL(6,:);Pf(7,:)=PL(7,:)+Pch(4,:)-Pdis(4,:);%é¦ˆçº¿åŠŸç‡ç»„æˆ
+Pf_limit=1000*[40,40,40,40,40,40,40]';%é¦ˆçº¿åŠŸç‡é™åˆ¶
+Pg=sdpvar(10,24);%å‘ç”µå•†åˆ†æ®µç”µé‡
+Pg_step=1000*[20,5,3,2,2,2,2,2,2,100]';%æŠ¥ä»·åŒºé—´
+Price_DSO=[3:12]'*0.1;%åˆ†æ®µç”µä»·
+Lagrant_G_left=sdpvar(10,24);%å‘ç”µå•†ç”µé‡ä¸‹ç•Œ
+Lagrant_G_right=sdpvar(10,24);%å‘ç”µå•†ç”µé‡ä¸Šç•Œ
+b_Lagrant_G_left=binvar(10,24);%å‘ç”µå•†ç”µé‡ä¸‹ç•Œå¸ƒå°”å˜é‡
+b_Lagrant_G_right=binvar(10,24);%å‘ç”µå•†ç”µé‡ä¸Šç•Œå¸ƒå°”å˜é‡
+Lagrant_L_left=sdpvar(7,24);%çº¿è·¯åŠŸç‡ä¸‹ç•Œ
+Lagrant_L_right=sdpvar(7,24);%çº¿è·¯åŠŸç‡ä¸Šç•Œ
+b_Lagrant_L_left=binvar(7,24);%çº¿è·¯åŠŸç‡ä¸Šç•Œå¸ƒå°”å˜é‡
+b_Lagrant_L_right=binvar(7,24);%çº¿è·¯åŠŸç‡ä¸‹ç•Œå¸ƒå°”å˜é‡
+Lagrant_G=sdpvar(1,24);%å¹³è¡¡èŠ‚ç‚¹ç”µä»·
 DLMP=sdpvar(7,24);%DLMP
 Ckkt=[sum(Pg)==sum(Pf),
     0<=Pg<=Pg_step*ones(1,24),
@@ -987,10 +987,10 @@ Ckkt=[sum(Pg)==sum(Pf),
     Pg_step*ones(1,24)-Pg<=1E6*b_Lagrant_G_right,0<=Lagrant_G_right<=(1-b_Lagrant_G_right),
     -Pf_limit*ones(1,24)<=Pf<=Pf_limit*ones(1,24),
     Pf+Pf_limit*ones(1,24)<=1E6*b_Lagrant_L_left,0<=Lagrant_L_left<=(1-b_Lagrant_L_left),
-    -Pf+Pf_limit*ones(1,24)<=1E6*b_Lagrant_L_right,0<=Lagrant_L_right<=(1-b_Lagrant_L_right)];%ÊĞ³¡³öÇåÎÊÌâµÄKKTÌõ¼ş
+    -Pf+Pf_limit*ones(1,24)<=1E6*b_Lagrant_L_right,0<=Lagrant_L_right<=(1-b_Lagrant_L_right)];%å¸‚åœºå‡ºæ¸…é—®é¢˜çš„KKTæ¡ä»¶
 Obj=sum(sum((Price_DSO*ones(1,24)).*Pg))-sum(sum(DLMP.*PL))+sum(sum((Pg_step*ones(1,24)).*Lagrant_G_right))+sum(sum((Lagrant_L_left+Lagrant_L_right).*(Pf_limit*ones(1,24))));
-%Çó½âÎÊÌâ
-C=[Ccs,Ckkt];%Ô¼ÊøÌõ¼ş
+%æ±‚è§£é—®é¢˜
+C=[Ccs,Ckkt];%çº¦æŸæ¡ä»¶
 ops=sdpsettings('solver','gurobi');
 result=solvesdp(C,Obj,ops);
 DLMP=double(DLMP);
@@ -999,10 +999,10 @@ Pf=double(Pf);
 Pch=double(Pch);
 Pdis=double(Pdis);
 Pg=double(Pg);
-%ÊµÊ±µ÷¶È
+%å®æ—¶è°ƒåº¦
 load data_RT_potential
 load result_order
-Pch1=RT_CS1(96).Pch;Pdis1=RT_CS1(96).Pdis;Smin1=RT_CS1(96).Smin;Smax1=RT_CS1(96).Smax;dS1=RT_CS1(96).dS;%È¡×îºóÒ»¸öÊ±¿ÌµÄ¿Éµ÷¶ÈÇ±Á¦
+Pch1=RT_CS1(96).Pch;Pdis1=RT_CS1(96).Pdis;Smin1=RT_CS1(96).Smin;Smax1=RT_CS1(96).Smax;dS1=RT_CS1(96).dS;%å–æœ€åä¸€ä¸ªæ—¶åˆ»çš„å¯è°ƒåº¦æ½œåŠ›
 Pch2=RT_CS2(96).Pch;Pdis2=RT_CS2(96).Pdis;Smin2=RT_CS2(96).Smin;Smax2=RT_CS2(96).Smax;dS2=RT_CS2(96).dS;
 Pch3=RT_CS3(96).Pch;Pdis3=RT_CS3(96).Pdis;Smin3=RT_CS3(96).Smin;Smax3=RT_CS3(96).Smax;dS3=RT_CS3(96).dS;
 Pch4=RT_CS4(96).Pch;Pdis4=RT_CS4(96).Pdis;Smin4=RT_CS4(96).Smin;Smax4=RT_CS4(96).Smax;dS4=RT_CS4(96).dS;
@@ -1011,38 +1011,38 @@ Pdismax=[Pdis1;Pdis2;Pdis3;Pdis4];
 Smin=[Smin1;Smin2;Smin3;Smin4];
 Smax=[Smax1;Smax2;Smax3;Smax4];
 dS=[dS1;dS2;dS3;dS4];
-Link=zeros(24,96);%Ê±¶Î»»Ëã¾ØÕó(ÈÕÇ°1h»»ËãÎªÊµÊ±15min)
+Link=zeros(24,96);%æ—¶æ®µæ¢ç®—çŸ©é˜µ(æ—¥å‰1hæ¢ç®—ä¸ºå®æ—¶15min)
 for i=1:24
     Link(i,4*i-3:4*i)=1;
 end
-DA_Ps=Pch-Pdis;%ÈÕÇ°µ÷¶ÈÊı¾İ
-DA_Ps=DA_Ps*Link;%Ê±¶Î»»Ëã
-DA_Pf=Pf*Link;%ÈÕÇ°×Ü¹¦ÂÊ
-%³äµçÕ¾Í¶±êÎÊÌâ
-Pch=sdpvar(4,96);%³äµçÕ¾³äµç¹¦ÂÊ
-Pdis=sdpvar(4,96);%³äµçÕ¾·Åµç¹¦ÂÊ
-S=sdpvar(4,96);%³äµçÕ¾¹ãÒå´¢ÄÜSOC
-Ccs=[0<=Pch<=Pchmax,0<=Pdis<=Pdismax,Smin<=S<=Smax,S(:,1)==0.95*0.25*Pch(:,1)-0.25*Pdis(:,1)/0.95+dS(:,1),S(:,2:96)==S(:,1:95)+0.25*0.95*Pch(:,2:96)-0.25*Pdis(:,2:96)/0.95+dS(:,2:96)];%Ô¼ÊøÌõ¼ş
-% %ÊĞ³¡³öÇåÎÊÌâ
+DA_Ps=Pch-Pdis;%æ—¥å‰è°ƒåº¦æ•°æ®
+DA_Ps=DA_Ps*Link;%æ—¶æ®µæ¢ç®—
+DA_Pf=Pf*Link;%æ—¥å‰æ€»åŠŸç‡
+%å……ç”µç«™æŠ•æ ‡é—®é¢˜
+Pch=sdpvar(4,96);%å……ç”µç«™å……ç”µåŠŸç‡
+Pdis=sdpvar(4,96);%å……ç”µç«™æ”¾ç”µåŠŸç‡
+S=sdpvar(4,96);%å……ç”µç«™å¹¿ä¹‰å‚¨èƒ½SOC
+Ccs=[0<=Pch<=Pchmax,0<=Pdis<=Pdismax,Smin<=S<=Smax,S(:,1)==0.95*0.25*Pch(:,1)-0.25*Pdis(:,1)/0.95+dS(:,1),S(:,2:96)==S(:,1:95)+0.25*0.95*Pch(:,2:96)-0.25*Pdis(:,2:96)/0.95+dS(:,2:96)];%çº¦æŸæ¡ä»¶
+% %å¸‚åœºå‡ºæ¸…é—®é¢˜
 Loadcurve=[0.955391944564747,0.978345604157644,1,0.995019488956258,0.972932005197055,0.970333477695972,0.930489389346037,0.890428757037679,0.902771762667822,0.941966219142486,0.911000433087917,0.862061498484192,0.840190558683413,0.831095712429623,0.756604590731919,0.671719359029883,0.611520138588133,0.582936336076224,0.572542226071893,0.574707665656128,0.587267215244695,0.644218276310091,0.755521870939801,0.884798614118666];
-Loadcurve=Loadcurve*Link;%»»³É96¸öÊ±¶Î
-PL_base=[5.704;5.705;5.631;6.518;4.890;5.705;5.847]*1000;%¸ººÉ·Ö²¼
-PL=PL_base*Loadcurve;%»ù´¡¸ººÉ
-Pf=sdpvar(7,96);%À¡Ïß¹¦ÂÊ
-Pf(1,:)=PL(1,:)+Pch(1,:)-Pdis(1,:);Pf(2,:)=PL(2,:);Pf(3,:)=PL(3,:);Pf(4,:)=PL(4,:)+Pch(2,:)-Pdis(2,:);Pf(5,:)=PL(5,:)+Pch(3,:)-Pdis(3,:);Pf(6,:)=PL(6,:);Pf(7,:)=PL(7,:)+Pch(4,:)-Pdis(4,:);%À¡Ïß¹¦ÂÊ×é³É
-Pf_limit=1000*[40,40,40,40,40,40,40]';%À¡Ïß¹¦ÂÊÏŞÖÆ
-Pg=sdpvar(10,96);%·¢µçÉÌ·Ö¶ÎµçÁ¿
-Pg_step=1000*[20,5,3,2,2,2,2,2,2,100]';%±¨¼ÛÇø¼ä
-Price_DSO=[3:12]'*0.1;%·Ö¶Îµç¼Û
-Lagrant_G_left=sdpvar(10,96);%·¢µçÉÌµçÁ¿ÏÂ½ç
-Lagrant_G_right=sdpvar(10,96);%·¢µçÉÌµçÁ¿ÉÏ½ç
-b_Lagrant_G_left=binvar(10,96);%·¢µçÉÌµçÁ¿ÏÂ½ç²¼¶û±äÁ¿
-b_Lagrant_G_right=binvar(10,96);%·¢µçÉÌµçÁ¿ÉÏ½ç²¼¶û±äÁ¿
-Lagrant_L_left=sdpvar(7,96);%ÏßÂ·¹¦ÂÊÏÂ½ç
-Lagrant_L_right=sdpvar(7,96);%ÏßÂ·¹¦ÂÊÉÏ½ç
-b_Lagrant_L_left=binvar(7,96);%ÏßÂ·¹¦ÂÊÉÏ½ç²¼¶û±äÁ¿
-b_Lagrant_L_right=binvar(7,96);%ÏßÂ·¹¦ÂÊÏÂ½ç²¼¶û±äÁ¿
-Lagrant_G=sdpvar(1,96);%Æ½ºâ½Úµãµç¼Û
+Loadcurve=Loadcurve*Link;%æ¢æˆ96ä¸ªæ—¶æ®µ
+PL_base=[5.704;5.705;5.631;6.518;4.890;5.705;5.847]*1000;%è´Ÿè·åˆ†å¸ƒ
+PL=PL_base*Loadcurve;%åŸºç¡€è´Ÿè·
+Pf=sdpvar(7,96);%é¦ˆçº¿åŠŸç‡
+Pf(1,:)=PL(1,:)+Pch(1,:)-Pdis(1,:);Pf(2,:)=PL(2,:);Pf(3,:)=PL(3,:);Pf(4,:)=PL(4,:)+Pch(2,:)-Pdis(2,:);Pf(5,:)=PL(5,:)+Pch(3,:)-Pdis(3,:);Pf(6,:)=PL(6,:);Pf(7,:)=PL(7,:)+Pch(4,:)-Pdis(4,:);%é¦ˆçº¿åŠŸç‡ç»„æˆ
+Pf_limit=1000*[40,40,40,40,40,40,40]';%é¦ˆçº¿åŠŸç‡é™åˆ¶
+Pg=sdpvar(10,96);%å‘ç”µå•†åˆ†æ®µç”µé‡
+Pg_step=1000*[20,5,3,2,2,2,2,2,2,100]';%æŠ¥ä»·åŒºé—´
+Price_DSO=[3:12]'*0.1;%åˆ†æ®µç”µä»·
+Lagrant_G_left=sdpvar(10,96);%å‘ç”µå•†ç”µé‡ä¸‹ç•Œ
+Lagrant_G_right=sdpvar(10,96);%å‘ç”µå•†ç”µé‡ä¸Šç•Œ
+b_Lagrant_G_left=binvar(10,96);%å‘ç”µå•†ç”µé‡ä¸‹ç•Œå¸ƒå°”å˜é‡
+b_Lagrant_G_right=binvar(10,96);%å‘ç”µå•†ç”µé‡ä¸Šç•Œå¸ƒå°”å˜é‡
+Lagrant_L_left=sdpvar(7,96);%çº¿è·¯åŠŸç‡ä¸‹ç•Œ
+Lagrant_L_right=sdpvar(7,96);%çº¿è·¯åŠŸç‡ä¸Šç•Œ
+b_Lagrant_L_left=binvar(7,96);%çº¿è·¯åŠŸç‡ä¸Šç•Œå¸ƒå°”å˜é‡
+b_Lagrant_L_right=binvar(7,96);%çº¿è·¯åŠŸç‡ä¸‹ç•Œå¸ƒå°”å˜é‡
+Lagrant_G=sdpvar(1,96);%å¹³è¡¡èŠ‚ç‚¹ç”µä»·
 DLMP=sdpvar(7,96);%DLMP
 Ckkt=[sum(Pg)==sum(Pf),
     0<=Pg<=Pg_step*ones(1,96),
@@ -1052,10 +1052,10 @@ Ckkt=[sum(Pg)==sum(Pf),
     Pg_step*ones(1,96)-Pg<=1E6*b_Lagrant_G_right,0<=Lagrant_G_right<=(1-b_Lagrant_G_right),
     -Pf_limit*ones(1,96)<=Pf<=Pf_limit*ones(1,96),
     Pf+Pf_limit*ones(1,96)<=1E6*b_Lagrant_L_left,0<=Lagrant_L_left<=(1-b_Lagrant_L_left),
-    -Pf+Pf_limit*ones(1,96)<=1E6*b_Lagrant_L_right,0<=Lagrant_L_right<=(1-b_Lagrant_L_right)];%ÊĞ³¡³öÇåÎÊÌâµÄKKTÌõ¼ş
+    -Pf+Pf_limit*ones(1,96)<=1E6*b_Lagrant_L_right,0<=Lagrant_L_right<=(1-b_Lagrant_L_right)];%å¸‚åœºå‡ºæ¸…é—®é¢˜çš„KKTæ¡ä»¶
 Obj=0.25*sum(sum((Price_DSO*ones(1,96)).*Pg))-sum(sum(DLMP.*PL))+sum(sum((Pg_step*ones(1,96)).*Lagrant_G_right))+sum(sum((Lagrant_L_left+Lagrant_L_right).*(Pf_limit*ones(1,96))))+0.1*0.25*sum(sum(abs(Pch-Pdis-DA_Ps)));
-%Çó½âÎÊÌâ
-C=[Ccs,Ckkt];%Ô¼ÊøÌõ¼ş
+%æ±‚è§£é—®é¢˜
+C=[Ccs,Ckkt];%çº¦æŸæ¡ä»¶
 result=solvesdp(C,Obj);
 DLMP=double(DLMP);
 Lagrant_G=double(Lagrant_G);
@@ -1065,12 +1065,12 @@ Pdis=double(Pdis);
 Pg=double(Pg);
 S=double(S);
 double(Obj)
-figure(1)%ÊµÊ±ÈÕÇ°½á¹û¶Ô±È
+figure(1)%å®æ—¶æ—¥å‰ç»“æœå¯¹æ¯”
 hold on
 plot(sum(Pf),'r.-')
 plot(sum(DA_Pf),'b--');
-Cost=sum(sum((Pf-PL).*DLMP));%×ÜÓÃµç·ÑÓÃ
-Cost_b=sum(sum(((Pf-PL)>0).*(Pf-PL).*DLMP))%×Ü¹ºµç·ÑÓÃ
-Cost_s=-sum(sum(((Pf-PL)<0).*(Pf-PL).*DLMP))%×ÜÊÛµçÊÕÈë
-Cost_r=0.1*0.25*sum(sum(abs(Pch-Pdis-DA_Ps)))%Æ½ºâ·ÑÓÃ
-MAPE=100*sum(abs((sum(DA_Pf)-sum(Pf))./sum(DA_Pf))/96);%Æ½¾ù°Ù·ÖÎó²î
+Cost=sum(sum((Pf-PL).*DLMP));%æ€»ç”¨ç”µè´¹ç”¨
+Cost_b=sum(sum(((Pf-PL)>0).*(Pf-PL).*DLMP))%æ€»è´­ç”µè´¹ç”¨
+Cost_s=-sum(sum(((Pf-PL)<0).*(Pf-PL).*DLMP))%æ€»å”®ç”µæ”¶å…¥
+Cost_r=0.1*0.25*sum(sum(abs(Pch-Pdis-DA_Ps)))%å¹³è¡¡è´¹ç”¨
+MAPE=100*sum(abs((sum(DA_Pf)-sum(Pf))./sum(DA_Pf))/96);%å¹³å‡ç™¾åˆ†è¯¯å·®
